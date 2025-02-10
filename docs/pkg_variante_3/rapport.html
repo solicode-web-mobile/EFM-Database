@@ -36,14 +36,36 @@
             
 <!--<p>pkg_variante_3/Projet-V3.md</p>
 -->
-<h1 id="-examen-final---gestion-des-propositions-de-randonnée-avec-laravel-note-sur-40-points"><strong>📌 Examen Final - Gestion des Propositions de Randonnée avec Laravel (Note sur 40 points)</strong></h1>
-<p>📌 <strong>Durée : 1h15 (75 minutes)</strong><br />
-📌 <strong>Barème total : 40 points</strong><br />
-📌 <strong>Objectif :</strong> Tester la capacité à <strong>gérer les relations en Laravel, modifier des objets liés via un Service, structurer proprement le code et améliorer l’interface utilisateur</strong>.</p>
+<table class="word-style">
+        <tbody>
+            <tr>
+              <td>
+                    <img src="/EFM-Database/assets/images/logo.png" alt="Logo" />
+                </td>
+                <td colspan="2" class="header">
+                    <p>Office de la Formation Professionnelle et de la Promotion du Travail</p>
+                    <p>Direction Régionale Nord Ouest II</p>
+                </td>
+            </tr>
+            <tr>
+               <td class="bold">Solicode</td>
+               <td class="bold">Examen de Fin de Module</td>
+               <td class="bold">Date EFM : 12/02/2025</td>
+            </tr>
+            <tr>
+                <td class="bold">Filière : DMB</td>
+                <td class="highlight">Base de données</td>
+                <td class="bold">Durée : 1 h 30 min</td>
+            </tr>
+            <tr>
+               <td class="bold">Groupe : 101</td>
+               <td class="">Variante 3</td>
+               <td class="bold">Année de formation : 2024/2025</td>
+            </tr>
+        </tbody>
+</table>
 
-<hr />
-
-<h2 id="-contexte-général"><strong>🔹 Contexte Général</strong></h2>
+<h2 id="contexte-général"><strong>Contexte Général</strong></h2>
 <p>Tu travailles sur une <strong>application Laravel</strong> permettant aux membres d’une <strong>association de randonnée</strong> de partager <strong>une seule proposition de randonnée</strong>.<br />
 Les autres membres peuvent ensuite <strong>ajouter des avis et des suggestions d’amélioration</strong>.</p>
 
@@ -66,7 +88,7 @@ Les autres membres peuvent ensuite <strong>ajouter des avis et des suggestions d
       <li>Ajout automatique d’une suggestion “Randonnée Recommandée” si une randonnée reçoit plus de 10 avis positifs.</li>
     </ul>
   </li>
-  <li><strong>🟢 Partie 2 : Mini-Projet (45 minutes, 20 points)</strong>
+  <li><strong>Partie 2 : Mini-Projet (45 minutes, 20 points)</strong>
     <ul>
       <li>Ajout d’un formulaire permettant de modifier les suggestions associées à un avis.</li>
       <li>Ajout des boutons “Modifier” et “Supprimer” pour chaque avis.</li>
@@ -85,7 +107,7 @@ Les autres membres peuvent ensuite <strong>ajouter des avis et des suggestions d
   <li>Modifier dynamiquement les suggestions d’amélioration d’un avis (<em>Many-to-Many</em>).</li>
 </ul>
 
-<h2 id="-barème--questions-20-points"><strong>🔹 Barème &amp; Questions (20 points)</strong></h2>
+<h2 id="barème--questions-20-points"><strong>Barème &amp; Questions (20 points)</strong></h2>
 <h3 id="1️⃣-création-de-la-classe-randonneeservice-6-points"><strong>1️⃣ Création de la classe <code class="language-plaintext highlighter-rouge">RandonneeService</code> (6 points)</strong></h3>
 <p>📌 <strong>Question 1 :</strong> Crée une classe <code class="language-plaintext highlighter-rouge">RandonneeService</code> dans <code class="language-plaintext highlighter-rouge">app/Services/</code> et ajoute une méthode <code class="language-plaintext highlighter-rouge">getRandonneesWithAvis()</code> qui retourne la liste des randonnées avec leurs relations (<code class="language-plaintext highlighter-rouge">membre</code>, <code class="language-plaintext highlighter-rouge">avis</code>, <code class="language-plaintext highlighter-rouge">suggestions</code>). <em>(2 points)</em><br />
 📌 <strong>Question 2 :</strong> Ajoute une méthode <code class="language-plaintext highlighter-rouge">incrementRandonneeViews(Randonnee $randonnee)</code> qui <strong>incrémente le nombre de vues</strong> de la randonnée et sauvegarde la modification. <em>(2 points)</em><br />
@@ -129,7 +151,7 @@ Les autres membres peuvent ensuite <strong>ajouter des avis et des suggestions d
 
 <hr />
 
-<h1 id="-partie-2--mini-projet-45-min---20-points"><strong>🟢 Partie 2 : Mini-Projet (45 min - 20 points)</strong></h1>
+<h1 id="partie-2--mini-projet-45-min---20-points"><strong>Partie 2 : Mini-Projet (45 min - 20 points)</strong></h1>
 <p>📌 <strong>Objectif :</strong></p>
 <ul>
   <li>Ajouter une fonctionnalité d’édition des suggestions associées aux avis.</li>
@@ -137,7 +159,7 @@ Les autres membres peuvent ensuite <strong>ajouter des avis et des suggestions d
   <li>Améliorer le design et la responsivité de l’interface.</li>
 </ul>
 
-<h2 id="-barème--questions-20-points-1"><strong>🔹 Barème &amp; Questions (20 points)</strong></h2>
+<h2 id="barème--questions-20-points-1"><strong>Barème &amp; Questions (20 points)</strong></h2>
 <h3 id="1️⃣-modification-des-suggestions-dun-avis-8-points"><strong>1️⃣ Modification des suggestions d’un avis (8 points)</strong></h3>
 <p>📌 <strong>Question 1 :</strong> Ajouter une méthode <code class="language-plaintext highlighter-rouge">updateAvisSuggestions(Avis $avis, array $suggestionsIds)</code> dans <code class="language-plaintext highlighter-rouge">RandonneeService</code> pour <strong>modifier les suggestions associées à un avis</strong>. <em>(3 points)</em><br />
 📌 <strong>Question 2 :</strong> Créer une méthode <code class="language-plaintext highlighter-rouge">edit($id)</code> dans <code class="language-plaintext highlighter-rouge">AvisController</code> qui retourne un formulaire d’édition avec la liste des suggestions disponibles. <em>(2 points)</em><br />
@@ -160,7 +182,7 @@ Les autres membres peuvent ensuite <strong>ajouter des avis et des suggestions d
 
 <hr />
 
-<h2 id="-remarque"><strong>📢 Remarque</strong></h2>
+<h2 id="remarque"><strong>Remarque</strong></h2>
 <ul>
   <li><strong>Total de l’examen : 40 points.</strong></li>
   <li>Tu peux ajouter en bonus :
