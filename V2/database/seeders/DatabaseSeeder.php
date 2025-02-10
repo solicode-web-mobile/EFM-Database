@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\ImageMotivation;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -18,6 +19,14 @@ class DatabaseSeeder extends Seeder
         User::factory()->create([
             'name' => 'Test User',
             'email' => 'test@example.com',
+        ]);
+
+        $this->call([
+            EmployeSeeder::class,
+            ImageMotivation::class,
+            SupportMotivationSeeder::class,
+            TypeMotivationSeeder::class,
+            SupportMotivationTypeSeeder::class,
         ]);
     }
 }
