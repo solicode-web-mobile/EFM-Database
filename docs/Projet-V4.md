@@ -84,7 +84,8 @@ L’examen est divisé en **deux parties** :
 ### **1️⃣ Modification des feedbacks d’un avis (8 points)**
 📌 **Question 1 :** Ajouter une méthode `updateAvisFeedback(Avis $avis, array $feedbackIds)` dans `StrategieService` pour **modifier les feedbacks associés à un avis**. *(3 points)*  
 📌 **Question 2 :** Créer une méthode `edit($id)` dans `AvisController` qui retourne un formulaire d’édition avec la liste des feedbacks disponibles. *(2 points)*  
-📌 **Question 3 :** Implémenter une méthode `update(Request $request, $id)` dans `AvisController` qui met à jour les feedbacks d’un avis en utilisant `StrategieService`. *(3 points)*  
+📌 **Question 3 :** Implémenter une méthode `update(Request $request, $id)` dans `AvisController` qui met à jour les feedbacks d’un avis en utilisant `StrategieService`. *(2 points)*  
+📌 **Question 4 :** Implémenter une méthode `show($id)` dans `ArticleController`. *(1 points)* 
 
 ---
 

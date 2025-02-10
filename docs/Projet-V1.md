@@ -81,7 +81,8 @@ L’examen est divisé en **deux parties** :
 ### **1️⃣ Modification des catégories d’un article (Many-to-Many) (8 points)**
 📌 **Question 1 :** Ajouter une méthode `updateArticleCategories(Article $article, array $categoryIds)` dans `ArticleService` pour **modifier les catégories associées à un article**. *(3 points)*  
 📌 **Question 2 :** Créer une méthode `edit($id)` dans `ArticleController` qui retourne un formulaire d’édition avec la liste des catégories disponibles et celles déjà attachées à l’article. *(2 points)*  
-📌 **Question 3 :** Implémenter une méthode `update(Request $request, $id)` dans `ArticleController` qui met à jour les catégories d’un article en utilisant `ArticleService`. *(3 points)*  
+📌 **Question 3 :** Implémenter une méthode `update(Request $request, $id)` dans `ArticleController` qui met à jour les catégories d’un article en utilisant `ArticleService`. *(2 points)*  
+📌 **Question 4 :** Implémenter une méthode `show($id)` dans `ArticleController`. *(1 points)* 
 
 ---
 

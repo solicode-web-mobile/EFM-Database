@@ -84,14 +84,16 @@ L’examen est divisé en **deux parties** :
 ### **1️⃣ Modification des types de motivation d’un message (8 points)**
 📌 **Question 1 :** Ajouter une méthode `updateSupportMotivation(SupportMotivation $support, array $typeMotivationIds)` dans `ImageService` pour **modifier les types de motivation associés à un message**. *(3 points)*  
 📌 **Question 2 :** Créer une méthode `edit($id)` dans `SupportMotivationController` qui retourne un formulaire d’édition avec la liste des types de motivation disponibles. *(2 points)*  
-📌 **Question 3 :** Implémenter une méthode `update(Request $request, $id)` dans `SupportMotivationController` qui met à jour les types de motivation d’un message en utilisant `ImageService`. *(3 points)*  
+📌 **Question 3 :** Implémenter une méthode `update(Request $request, $id)` dans `SupportMotivationController` qui met à jour les types de motivation d’un message en utilisant `ImageService`. *(2 points)*  
+📌 **Question 4 :** Implémenter une méthode `show($id)` dans `ArticleController`. *(1 points)* 
 
 ---
 
 ### **2️⃣ Ajout des boutons "Modifier" et "Supprimer" (6 points)**
 📌 **Question 4 :** Ajouter dans `index.blade.php` une colonne avec **un bouton "Modifier" redirigeant vers la page d'édition** du message de soutien. *(2 points)*  
 📌 **Question 5 :** Ajouter **un bouton "Supprimer" avec un formulaire `DELETE`** pour supprimer un message de soutien. *(2 points)*  
-📌 **Question 6 :** Implémenter la méthode `destroy($id)` dans `SupportMotivationController` pour gérer la suppression d’un message de soutien. *(2 points)*  
+📌 **Question 6 :** Implémenter la méthode `destroy($id)` dans `SupportMotivationController` pour gérer la suppression d’un message de soutien. *(2 points)* 
+
 
 ---
 
