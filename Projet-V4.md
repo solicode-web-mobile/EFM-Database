@@ -48,7 +48,6 @@ L’examen est divisé en **deux parties** :
 📌 **Question 4 :** Crée un contrôleur `StrategieController` et injecte `StrategieService` dans son constructeur via l’Injection de Dépendance. *(2 points)*  
 📌 **Question 5 :** Implémente une méthode `index()` qui :
 - Récupère la liste des stratégies via `StrategieService`.
-- Incrémente les vues des stratégies et des avis associés.
 - Vérifie si une stratégie doit recevoir automatiquement le feedback "Stratégie Validée" lorsqu’elle dépasse **10 avis positifs**.
 - Retourne les données à la vue `index.blade.php`. *(4 points)*  
 

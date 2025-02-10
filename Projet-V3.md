@@ -48,7 +48,6 @@ L’examen est divisé en **deux parties** :
 📌 **Question 4 :** Crée un contrôleur `RandonneeController` et injecte `RandonneeService` dans son constructeur via l’Injection de Dépendance. *(2 points)*  
 📌 **Question 5 :** Implémente une méthode `index()` qui :
 - Récupère la liste des randonnées via `RandonneeService`.
-- Incrémente les vues des randonnées et des avis associés.
 - Vérifie si une randonnée doit recevoir automatiquement la suggestion "Randonnée Recommandée" lorsqu’elle dépasse **10 avis positifs**.
 - Retourne les données à la vue `index.blade.php`. *(4 points)*  
 

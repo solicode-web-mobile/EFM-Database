@@ -48,7 +48,6 @@ L’examen est divisé en **deux parties** :
 📌 **Question 4 :** Crée un contrôleur `ImageController` et injecte `ImageService` dans son constructeur via l’Injection de Dépendance. *(2 points)*  
 📌 **Question 5 :** Implémente une méthode `index()` qui :
 - Récupère la liste des images via `ImageService`.
-- Incrémente les vues des images et des messages de soutien associés.
 - Vérifie si un message de soutien doit recevoir automatiquement le type de motivation "Encouragement" lorsqu’il dépasse **5 réactions**.
 - Retourne les données à la vue `index.blade.php`. *(4 points)*  
 

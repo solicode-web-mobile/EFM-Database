@@ -48,7 +48,6 @@ L’examen est divisé en **deux parties** :
 📌 **Question 4 :** Crée un contrôleur `RecetteController` et injecte `RecetteService` dans son constructeur via l’Injection de Dépendance. *(2 points)*  
 📌 **Question 5 :** Implémente une méthode `index()` qui :
 - Récupère la liste des recettes via `RecetteService`.
-- Incrémente les vues des recettes et des avis associés.
 - Vérifie si une recette doit recevoir automatiquement la suggestion "Plat Favori" lorsqu’elle dépasse **10 avis positifs**.
 - Retourne les données à la vue `index.blade.php`. *(4 points)*  
 

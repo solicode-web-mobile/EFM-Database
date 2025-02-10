@@ -45,7 +45,6 @@ L’examen est divisé en **deux parties** :
 📌 **Question 4 :** Crée un contrôleur `ArticleController` et injecte `ArticleService` dans son constructeur via l’Injection de Dépendance. *(2 points)*  
 📌 **Question 5 :** Implémente une méthode `index()` qui :
 - Récupère la liste des articles via `ArticleService`.
-- Incrémente les vues des articles et des commentaires associés.
 - Vérifie si l’article doit recevoir la catégorie `Populaire` (ajouter cette catégorie s’il dépasse **10 vues**).
 - Retourne les données à la vue `index.blade.php`. *(4 points)*  
 
