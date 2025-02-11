@@ -16,8 +16,8 @@ class ArticleController extends Controller
     public function index()
     {
         $articles = $this->articleService->getArticlesWithRelations();
-        return $articles;
-        // return view('articles.index', compact('articles'));
+        // return $articles;
+        return view('articles.index', compact('articles'));
     }
 
     /**

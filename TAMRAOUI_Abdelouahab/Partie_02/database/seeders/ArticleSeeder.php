@@ -15,6 +15,7 @@ class ArticleSeeder extends Seeder
         $articles = [
             [
                 'title' => 'Article 1',
+                'view_counter' => 15,
                 'user_id' => 1,
             ],
             [
@@ -23,6 +24,7 @@ class ArticleSeeder extends Seeder
             ],
             [
                 'title' => 'Article 3',
+                'view_counter' => 9,
                 'user_id' => 3,
             ],
         ];
