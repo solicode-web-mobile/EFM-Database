@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\TypeMotivation;
 use App\Services\ImageService;
 use Illuminate\Http\Request;
 
@@ -14,8 +15,20 @@ class ImageMotivationController extends Controller
         $this->imageService = $imageService;
     }
 
-    public function index(){
+    public function index()
+    {
         $images = $this->imageService->getImagesWithSupport();
+
+        foreach ($images as $image) {
+            $this->imageService->incrementImageViews($image);
+            $this->imageService->incrementSupportViews($image);
+
+            foreach ($image->supportMotivations as $support) {
+                if ($support->reactions > 5 && !$support->typeMotivations->contains('name', 'Encouragement')) {
+                    $support->typeMotivations()->attach(TypeMotivation::firstOrCreate(['name' => 'Encouragement']));
+                }
+            }
+        }
 
         return view('images.index', compact('images'));
     }
