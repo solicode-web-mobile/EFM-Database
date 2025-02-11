@@ -8,12 +8,12 @@ class Employe extends Model
 {
     protected $fillable = ['name'];
 
-    public function ImageMotivation(){
+    public function imageMotivation(){
         return $this->hasOne(ImageMotivation::class);
     }
 
-    public function support_motivations()
-    {
-        return $this->hasMany(SupportMotivation::class);
-    }
+    // public function support_motivations()
+    // {
+    //     return $this->hasMany(SupportMotivation::class);
+    // }
 }

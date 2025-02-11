@@ -10,6 +10,6 @@ class TypeMotivation extends Model
 
     public function supportMotivations()
     {
-        return $this->belongsToMany(SupportMotivation::class);
+        return $this->belongsToMany(SupportMotivation::class, 'support_motivation_types', 'type_motivation_id', 'support_motivation_id');
     }
 }

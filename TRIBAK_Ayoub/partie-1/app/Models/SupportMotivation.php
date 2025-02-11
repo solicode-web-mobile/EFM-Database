@@ -12,13 +12,13 @@ class SupportMotivation extends Model
         return $this->belongsTo(ImageMotivation::class, 'image_id');
     }
 
-    public function motivationTypes()
+    public function typeMotivations()
     {
-        return $this->belongsToMany(TypeMotivation::class);
+        return $this->belongsToMany(TypeMotivation::class, 'support_motivation_types', 'support_motivation_id', 'type_motivation_id');
     }
 
-    public function employes()
-    {
-        return $this->belongsTo(Employe::class);
-    }
+    // public function employes()
+    // {
+    //     return $this->belongsTo(Employe::class);
+    // }
 }
