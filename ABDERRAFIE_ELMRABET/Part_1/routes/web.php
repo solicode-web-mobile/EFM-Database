@@ -10,4 +10,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/hikes', [HikeController::class, 'index'])->name('hikes.index');
+Route::get('/home', function () {
+    return view('home');
+});
+
+// Route::get('/hikes', [HikeController::class, 'index'])->name('hikes.index');
