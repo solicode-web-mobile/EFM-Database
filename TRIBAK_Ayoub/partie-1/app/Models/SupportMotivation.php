@@ -6,19 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class SupportMotivation extends Model
 {
-    protected $fillable = ['content','image_id', 'views', 'reactions'];
+    protected $fillable = ['content','image_motivation_id', 'views', 'reactions'];
 
     public function imageMotivation(){
-        return $this->belongsTo(ImageMotivation::class, 'image_id');
+        return $this->belongsTo(ImageMotivation::class);
     }
 
     public function typeMotivations()
     {
         return $this->belongsToMany(TypeMotivation::class, 'support_motivation_types', 'support_motivation_id', 'type_motivation_id');
     }
-
-    // public function employes()
-    // {
-    //     return $this->belongsTo(Employe::class);
-    // }
 }

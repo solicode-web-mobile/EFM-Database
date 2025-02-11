@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('support_motivation_types', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('support_motivation_id')->constrained('support_motivations')->onDelete('cascade');
-            $table->foreignId('type_motivation_id')->constrained('type_motivations')->onDelete('cascade');
+            $table->foreignId('support_motivation_id')->constrained()->onDelete('cascade');
+            $table->foreignId('type_motivation_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }
