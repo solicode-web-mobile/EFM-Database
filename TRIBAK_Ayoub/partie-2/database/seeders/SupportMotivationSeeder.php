@@ -15,25 +15,25 @@ class SupportMotivationSeeder extends Seeder
     {
         $supportMotivations = [
             [
-                'image_id' => 1, 
+                'image_motivation_id' => 1, 
                 'content' => 'Keep up the great work!',
                 'views' => 0,
                 'reactions' => 3,
             ],
             [
-                'image_id' => 2,
+                'image_motivation_id' => 2,
                 'content' => 'You are doing amazing!',
                 'views' => 0,
                 'reactions' => 2,
             ],
             [
-                'image_id' => 3, 
+                'image_motivation_id' => 3, 
                 'content' => 'Keep pushing forward!',
                 'views' => 0,
                 'reactions' => 1,
             ],
             [
-                'image_id' => 4, 
+                'image_motivation_id' => 4, 
                 'content' => 'You are an inspiration!',
                 'views' => 0,
                 'reactions' => 6,

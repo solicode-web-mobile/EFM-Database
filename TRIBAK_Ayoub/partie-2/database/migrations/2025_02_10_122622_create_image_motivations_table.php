@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('image_motivations', function (Blueprint $table) {
             $table->id();
             $table->string('url');
-            $table->foreignId('employe_id')->constrained('employes')->onDelete('cascade');
+            $table->foreignId('employe_id')->constrained()->onDelete('cascade');
             $table->integer('views')->default(0);
             $table->timestamps();
         });

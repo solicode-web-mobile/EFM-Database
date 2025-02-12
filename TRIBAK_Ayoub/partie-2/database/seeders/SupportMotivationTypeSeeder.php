@@ -14,11 +14,10 @@ class SupportMotivationTypeSeeder extends Seeder
     public function run(): void
     {
         $supportMotivationTypes = [
-            ['support_motivation_id' => 1, 'type_motivation_id' => 1], 
+            ['support_motivation_id' => 1, 'type_motivation_id' => 2], 
             ['support_motivation_id' => 2, 'type_motivation_id' => 2], 
             ['support_motivation_id' => 3, 'type_motivation_id' => 3], 
-            ['support_motivation_id' => 4, 'type_motivation_id' => 1], 
-            ['support_motivation_id' => 4, 'type_motivation_id' => 2], 
+            ['support_motivation_id' => 4, 'type_motivation_id' => 3],  
         ];
 
         foreach ($supportMotivationTypes as $supportMotivationType) {
