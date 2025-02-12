@@ -101,7 +101,7 @@
 <h1 id="partie-1--live-coding-30-min---20-points"><strong>Partie 1 : Live Coding (30 min - 20 points)</strong></h1>
 
 <h2 id="barème--questions-20-points"><strong>Barème &amp; Questions (20 points)</strong></h2>
-<h3 id="-création-de-la-classe-articleservice-6-points">**Création de la classe <code class="language-plaintext highlighter-rouge">ArticleService</code> (6 points)**</h3>
+<h3 id="création-de-la-classe-articleservice-6-points"><strong>Création de la classe <code class="language-plaintext highlighter-rouge">ArticleService</code> (6 points)</strong></h3>
 <ul>
   <li>
     <p><strong>Question 1 :</strong> Crée une classe <code class="language-plaintext highlighter-rouge">ArticleService</code> dans <code class="language-plaintext highlighter-rouge">app/Services/</code> et ajoute une méthode <code class="language-plaintext highlighter-rouge">getArticlesWithRelations()</code> qui retourne la liste des articles avec leurs relations (<code class="language-plaintext highlighter-rouge">user</code>, <code class="language-plaintext highlighter-rouge">comments</code>, <code class="language-plaintext highlighter-rouge">categories</code>). <em>(2 points)</em></p>
@@ -233,7 +233,7 @@ Les autres employés peuvent ensuite <strong>ajouter des messages de soutien</st
 <p>L’examen est divisé en <strong>deux parties</strong> :</p>
 
 <ol>
-  <li><strong> Partie 1 : Live Coding (30 minutes, 20 points)</strong>
+  <li><strong>Partie 1 : Live Coding (30 minutes, 20 points)</strong>
     <ul>
       <li>Affichage des images de motivation avec leurs messages de soutien.</li>
       <li>Incrémentation du nombre de vues d’une image et de ses messages via un Service.</li>
@@ -251,8 +251,8 @@ Les autres employés peuvent ensuite <strong>ajouter des messages de soutien</st
 
 <hr />
 
-<h1 id="-partie-1--live-coding-30-min---20-points"><strong> Partie 1 : Live Coding (30 min - 20 points)</strong></h1>
-<p> <strong>Objectif :</strong></p>
+<h1 id="partie-1--live-coding-30-min---20-points"><strong>Partie 1 : Live Coding (30 min - 20 points)</strong></h1>
+<p><strong>Objectif :</strong></p>
 <ul>
   <li>Afficher la liste des images de motivation avec leurs messages de soutien.</li>
   <li>Gérer le nombre de vues des images et des messages.</li>
@@ -260,15 +260,15 @@ Les autres employés peuvent ensuite <strong>ajouter des messages de soutien</st
 </ul>
 
 <h2 id="barème--questions-20-points"><strong>Barème &amp; Questions (20 points)</strong></h2>
-<h3 id="-création-de-la-classe-imageservice-6-points"><strong> Création de la classe <code class="language-plaintext highlighter-rouge">ImageService</code> (6 points)</strong></h3>
-<p> <strong>Question 1 :</strong> Crée une classe <code class="language-plaintext highlighter-rouge">ImageService</code> dans <code class="language-plaintext highlighter-rouge">app/Services/</code> et ajoute une méthode <code class="language-plaintext highlighter-rouge">getImagesWithSupport()</code> qui retourne la liste des images avec leurs relations (<code class="language-plaintext highlighter-rouge">employe</code>, <code class="language-plaintext highlighter-rouge">supportMotivation</code>, <code class="language-plaintext highlighter-rouge">typeMotivation</code>). <em>(2 points)</em><br />
+<h3 id="création-de-la-classe-imageservice-6-points"><strong>Création de la classe <code class="language-plaintext highlighter-rouge">ImageService</code> (6 points)</strong></h3>
+<p><strong>Question 1 :</strong> Crée une classe <code class="language-plaintext highlighter-rouge">ImageService</code> dans <code class="language-plaintext highlighter-rouge">app/Services/</code> et ajoute une méthode <code class="language-plaintext highlighter-rouge">getImagesWithSupport()</code> qui retourne la liste des images avec leurs relations (<code class="language-plaintext highlighter-rouge">employe</code>, <code class="language-plaintext highlighter-rouge">supportMotivation</code>, <code class="language-plaintext highlighter-rouge">typeMotivation</code>). <em>(2 points)</em><br />
  <strong>Question 2 :</strong> Ajoute une méthode <code class="language-plaintext highlighter-rouge">incrementImageViews(Image $image)</code> qui <strong>incrémente le nombre de vues</strong> de l’image et sauvegarde la modification. <em>(2 points)</em><br />
  <strong>Question 3 :</strong> Ajoute une méthode <code class="language-plaintext highlighter-rouge">incrementSupportViews(Image $image)</code> qui <strong>incrémente le nombre de vues de chaque message de soutien lié à cette image</strong> et sauvegarde les modifications. <em>(2 points)</em></p>
 
 <hr />
 
-<h3 id="2️⃣-implémentation-du-imagecontroller-6-points"><strong>Implémentation du <code class="language-plaintext highlighter-rouge">ImageController</code> (6 points)</strong></h3>
-<p> <strong>Question 4 :</strong> Crée un contrôleur <code class="language-plaintext highlighter-rouge">ImageController</code> et injecte <code class="language-plaintext highlighter-rouge">ImageService</code> dans son constructeur via l’Injection de Dépendance. <em>(2 points)</em><br />
+<h3 id="implémentation-du-imagecontroller-6-points"><strong>Implémentation du <code class="language-plaintext highlighter-rouge">ImageController</code> (6 points)</strong></h3>
+<p><strong>Question 4 :</strong> Crée un contrôleur <code class="language-plaintext highlighter-rouge">ImageController</code> et injecte <code class="language-plaintext highlighter-rouge">ImageService</code> dans son constructeur via l’Injection de Dépendance. <em>(2 points)</em><br />
  <strong>Question 5 :</strong> Implémente une méthode <code class="language-plaintext highlighter-rouge">index()</code> qui :</p>
 <ul>
   <li>Récupère la liste des images via <code class="language-plaintext highlighter-rouge">ImageService</code>.</li>
@@ -278,8 +278,8 @@ Les autres employés peuvent ensuite <strong>ajouter des messages de soutien</st
 
 <hr />
 
-<h3 id="-création-de-la-vue-indexbladephp-6-points"><strong> Création de la Vue <code class="language-plaintext highlighter-rouge">index.blade.php</code> (6 points)</strong></h3>
-<p> <strong>Question 6 :</strong> Crée une vue <code class="language-plaintext highlighter-rouge">resources/views/images/index.blade.php</code> qui affiche les images sous forme de tableau avec les colonnes suivantes :</p>
+<h3 id="création-de-la-vue-indexbladephp-6-points"><strong>Création de la Vue <code class="language-plaintext highlighter-rouge">index.blade.php</code> (6 points)</strong></h3>
+<p><strong>Question 6 :</strong> Crée une vue <code class="language-plaintext highlighter-rouge">resources/views/images/index.blade.php</code> qui affiche les images sous forme de tableau avec les colonnes suivantes :</p>
 <ul>
   <li><strong>Image partagée</strong>.</li>
   <li><strong>Nom de l’employé</strong> (<em>relation One-to-One</em>).</li>
@@ -288,12 +288,12 @@ Les autres employés peuvent ensuite <strong>ajouter des messages de soutien</st
   <li><strong>Liste des types de motivation associés aux messages</strong> (<em>relation Many-to-Many</em>). <em>(4 points)</em></li>
 </ul>
 
-<p> <strong>Question 7 :</strong> Tester le bon fonctionnement de l’affichage et s’assurer que les vues des images et des messages sont bien incrémentées après chaque rafraîchissement de la page. <em>(2 points)</em></p>
+<p><strong>Question 7 :</strong> Tester le bon fonctionnement de l’affichage et s’assurer que les vues des images et des messages sont bien incrémentées après chaque rafraîchissement de la page. <em>(2 points)</em></p>
 
 <hr />
 
-<h3 id="4️⃣-définition-de-la-route-et-test-2-points"><strong>Définition de la Route et Test (2 points)</strong></h3>
-<p> <strong>Question 8 :</strong> Déclare une route <code class="language-plaintext highlighter-rouge">/images</code> dans <code class="language-plaintext highlighter-rouge">routes/web.php</code> pour appeler la méthode <code class="language-plaintext highlighter-rouge">index()</code> du <code class="language-plaintext highlighter-rouge">ImageController</code>. <em>(1 point)</em><br />
+<h3 id="définition-de-la-route-et-test-2-points"><strong>Définition de la Route et Test (2 points)</strong></h3>
+<p><strong>Question 8 :</strong> Déclare une route <code class="language-plaintext highlighter-rouge">/images</code> dans <code class="language-plaintext highlighter-rouge">routes/web.php</code> pour appeler la méthode <code class="language-plaintext highlighter-rouge">index()</code> du <code class="language-plaintext highlighter-rouge">ImageController</code>. <em>(1 point)</em><br />
  <strong>Question 9 :</strong> Lancer l’application, tester l’affichage dans le navigateur et vérifier que :</p>
 <ul>
   <li>Les <strong>images et leurs messages de soutien</strong> s’affichent correctement.</li>
@@ -304,7 +304,7 @@ Les autres employés peuvent ensuite <strong>ajouter des messages de soutien</st
 <hr />
 
 <h1 id="partie-2--mini-projet-45-min---20-points"><strong>Partie 2 : Mini-Projet (45 min - 20 points)</strong></h1>
-<p> <strong>Objectif :</strong></p>
+<p><strong>Objectif :</strong></p>
 <ul>
   <li>Ajouter une fonctionnalité d’édition des types de motivation associés aux messages de soutien.</li>
   <li>Permettre la suppression des messages de soutien.</li>
@@ -312,25 +312,25 @@ Les autres employés peuvent ensuite <strong>ajouter des messages de soutien</st
 </ul>
 
 <h2 id="barème--questions-20-points-1"><strong>Barème &amp; Questions (20 points)</strong></h2>
-<h3 id="-modification-des-types-de-motivation-dun-message-8-points"><strong> Modification des types de motivation d’un message (8 points)</strong></h3>
-<p> <strong>Question 1 :</strong> Ajouter une méthode <code class="language-plaintext highlighter-rouge">updateSupportMotivation(SupportMotivation $support, array $typeMotivationIds)</code> dans <code class="language-plaintext highlighter-rouge">ImageService</code> pour <strong>modifier les types de motivation associés à un message</strong>. <em>(3 points)</em><br />
- <strong>Question 2 :</strong> Créer une méthode <code class="language-plaintext highlighter-rouge">edit($id)</code> dans <code class="language-plaintext highlighter-rouge">SupportMotivationController</code> qui retourne un formulaire d’édition avec la liste des types de motivation disponibles. <em>(2 points)</em><br />
- <strong>Question 3 :</strong> Implémenter une méthode <code class="language-plaintext highlighter-rouge">update(Request $request, $id)</code> dans <code class="language-plaintext highlighter-rouge">SupportMotivationController</code> qui met à jour les types de motivation d’un message en utilisant <code class="language-plaintext highlighter-rouge">ImageService</code>. <em>(2 points)</em><br />
- <strong>Question 4 :</strong> Implémenter une méthode <code class="language-plaintext highlighter-rouge">show($id)</code> dans <code class="language-plaintext highlighter-rouge">ArticleController</code>. <em>(1 points)</em></p>
+<h3 id="-modification-des-types-de-motivation-dun-message-8-points">** Modification des types de motivation d’un message (8 points)**</h3>
+<p><strong>Question 10 :</strong> Ajouter une méthode <code class="language-plaintext highlighter-rouge">updateSupportMotivation(SupportMotivation $support, array $typeMotivationIds)</code> dans <code class="language-plaintext highlighter-rouge">ImageService</code> pour <strong>modifier les types de motivation associés à un message</strong>. <em>(3 points)</em><br />
+ <strong>Question 11 :</strong> Créer une méthode <code class="language-plaintext highlighter-rouge">edit($id)</code> dans <code class="language-plaintext highlighter-rouge">SupportMotivationController</code> qui retourne un formulaire d’édition avec la liste des types de motivation disponibles. <em>(2 points)</em><br />
+ <strong>Question 12 :</strong> Implémenter une méthode <code class="language-plaintext highlighter-rouge">update(Request $request, $id)</code> dans <code class="language-plaintext highlighter-rouge">SupportMotivationController</code> qui met à jour les types de motivation d’un message en utilisant <code class="language-plaintext highlighter-rouge">ImageService</code>. <em>(2 points)</em><br />
+ <strong>Question 13 :</strong> Implémenter une méthode <code class="language-plaintext highlighter-rouge">show($id)</code> dans <code class="language-plaintext highlighter-rouge">ArticleController</code>. <em>(1 points)</em></p>
 
 <hr />
 
-<h3 id="2️⃣-ajout-des-boutons-modifier-et-supprimer-6-points"><strong>Ajout des boutons “Modifier” et “Supprimer” (6 points)</strong></h3>
-<p> <strong>Question 4 :</strong> Ajouter dans <code class="language-plaintext highlighter-rouge">index.blade.php</code> une colonne avec <strong>un bouton “Modifier” redirigeant vers la page d’édition</strong> du message de soutien. <em>(2 points)</em><br />
- <strong>Question 5 :</strong> Ajouter <strong>un bouton “Supprimer” avec un formulaire <code class="language-plaintext highlighter-rouge">DELETE</code></strong> pour supprimer un message de soutien. <em>(2 points)</em><br />
- <strong>Question 6 :</strong> Implémenter la méthode <code class="language-plaintext highlighter-rouge">destroy($id)</code> dans <code class="language-plaintext highlighter-rouge">SupportMotivationController</code> pour gérer la suppression d’un message de soutien. <em>(2 points)</em></p>
+<h3 id="ajout-des-boutons-modifier-et-supprimer-6-points"><strong>Ajout des boutons “Modifier” et “Supprimer” (6 points)</strong></h3>
+<p><strong>Question 14 :</strong> Ajouter dans <code class="language-plaintext highlighter-rouge">index.blade.php</code> une colonne avec <strong>un bouton “Modifier” redirigeant vers la page d’édition</strong> du message de soutien. <em>(2 points)</em><br />
+ <strong>Question 15 :</strong> Ajouter <strong>un bouton “Supprimer” avec un formulaire <code class="language-plaintext highlighter-rouge">DELETE</code></strong> pour supprimer un message de soutien. <em>(2 points)</em><br />
+ <strong>Question 16 :</strong> Implémenter la méthode <code class="language-plaintext highlighter-rouge">destroy($id)</code> dans <code class="language-plaintext highlighter-rouge">SupportMotivationController</code> pour gérer la suppression d’un message de soutien. <em>(2 points)</em></p>
 
 <hr />
 
-<h3 id="-amélioration-de-laffichage-avec-du-css-6-points"><strong> Amélioration de l’affichage avec du CSS (6 points)</strong></h3>
-<p> <strong>Question 7 :</strong> Modifier <code class="language-plaintext highlighter-rouge">index.blade.php</code> pour afficher les images et les messages sous forme de <strong>tableau stylisé</strong> en ajoutant un fichier CSS. <em>(2 points)</em><br />
- <strong>Question 8 :</strong> Améliorer le <strong>formulaire d’édition</strong> pour qu’il soit plus clair et agréable visuellement. <em>(2 points)</em><br />
- <strong>Question 9 :</strong> Vérifier que les boutons sont bien alignés et que l’affichage est <strong>responsive</strong>. <em>(2 points)</em></p>
+<h3 id="-amélioration-de-laffichage-avec-du-css-6-points">** Amélioration de l’affichage avec du CSS (6 points)**</h3>
+<p><strong>Question 17 :</strong> Modifier <code class="language-plaintext highlighter-rouge">index.blade.php</code> pour afficher les images et les messages sous forme de <strong>tableau stylisé</strong> en ajoutant un fichier CSS. <em>(2 points)</em><br />
+ <strong>Question 18 :</strong> Améliorer le <strong>formulaire d’édition</strong> pour qu’il soit plus clair et agréable visuellement. <em>(2 points)</em><br />
+ <strong>Question 19 :</strong> Vérifier que les boutons sont bien alignés et que l’affichage est <strong>responsive</strong>. <em>(2 points)</em></p>
 
 <hr />
 
@@ -395,7 +395,7 @@ Les autres membres peuvent ensuite <strong>ajouter des avis et des suggestions d
 <p>L’examen est divisé en <strong>deux parties</strong> :</p>
 
 <ol>
-  <li><strong> Partie 1 : Live Coding (30 minutes, 20 points)</strong>
+  <li><strong>Partie 1 : Live Coding (30 minutes, 20 points)</strong>
     <ul>
       <li>Affichage des propositions de randonnée avec leurs avis.</li>
       <li>Incrémentation du nombre de vues d’une randonnée et de ses avis via un Service.</li>
@@ -413,8 +413,8 @@ Les autres membres peuvent ensuite <strong>ajouter des avis et des suggestions d
 
 <hr />
 
-<h1 id="-partie-1--live-coding-30-min---20-points"><strong> Partie 1 : Live Coding (30 min - 20 points)</strong></h1>
-<p> <strong>Objectif :</strong></p>
+<h1 id="partie-1--live-coding-30-min---20-points"><strong>Partie 1 : Live Coding (30 min - 20 points)</strong></h1>
+<p><strong>Objectif :</strong></p>
 <ul>
   <li>Afficher la liste des propositions de randonnée avec leurs avis.</li>
   <li>Gérer le nombre de vues des propositions et des avis.</li>
@@ -422,15 +422,15 @@ Les autres membres peuvent ensuite <strong>ajouter des avis et des suggestions d
 </ul>
 
 <h2 id="barème--questions-20-points"><strong>Barème &amp; Questions (20 points)</strong></h2>
-<h3 id="-création-de-la-classe-randonneeservice-6-points"><strong> Création de la classe <code class="language-plaintext highlighter-rouge">RandonneeService</code> (6 points)</strong></h3>
-<p> <strong>Question 1 :</strong> Crée une classe <code class="language-plaintext highlighter-rouge">RandonneeService</code> dans <code class="language-plaintext highlighter-rouge">app/Services/</code> et ajoute une méthode <code class="language-plaintext highlighter-rouge">getRandonneesWithAvis()</code> qui retourne la liste des randonnées avec leurs relations (<code class="language-plaintext highlighter-rouge">membre</code>, <code class="language-plaintext highlighter-rouge">avis</code>, <code class="language-plaintext highlighter-rouge">suggestions</code>). <em>(2 points)</em><br />
+<h3 id="création-de-la-classe-randonneeservice-6-points"><strong>Création de la classe <code class="language-plaintext highlighter-rouge">RandonneeService</code> (6 points)</strong></h3>
+<p><strong>Question 1 :</strong> Crée une classe <code class="language-plaintext highlighter-rouge">RandonneeService</code> dans <code class="language-plaintext highlighter-rouge">app/Services/</code> et ajoute une méthode <code class="language-plaintext highlighter-rouge">getRandonneesWithAvis()</code> qui retourne la liste des randonnées avec leurs relations (<code class="language-plaintext highlighter-rouge">membre</code>, <code class="language-plaintext highlighter-rouge">avis</code>, <code class="language-plaintext highlighter-rouge">suggestions</code>). <em>(2 points)</em><br />
  <strong>Question 2 :</strong> Ajoute une méthode <code class="language-plaintext highlighter-rouge">incrementRandonneeViews(Randonnee $randonnee)</code> qui <strong>incrémente le nombre de vues</strong> de la randonnée et sauvegarde la modification. <em>(2 points)</em><br />
  <strong>Question 3 :</strong> Ajoute une méthode <code class="language-plaintext highlighter-rouge">incrementAvisViews(Randonnee $randonnee)</code> qui <strong>incrémente le nombre de vues de chaque avis lié à cette randonnée</strong> et sauvegarde les modifications. <em>(2 points)</em></p>
 
 <hr />
 
-<h3 id="2️⃣-implémentation-du-randonneecontroller-6-points"><strong>Implémentation du <code class="language-plaintext highlighter-rouge">RandonneeController</code> (6 points)</strong></h3>
-<p> <strong>Question 4 :</strong> Crée un contrôleur <code class="language-plaintext highlighter-rouge">RandonneeController</code> et injecte <code class="language-plaintext highlighter-rouge">RandonneeService</code> dans son constructeur via l’Injection de Dépendance. <em>(2 points)</em><br />
+<h3 id="implémentation-du-randonneecontroller-6-points"><strong>Implémentation du <code class="language-plaintext highlighter-rouge">RandonneeController</code> (6 points)</strong></h3>
+<p><strong>Question 4 :</strong> Crée un contrôleur <code class="language-plaintext highlighter-rouge">RandonneeController</code> et injecte <code class="language-plaintext highlighter-rouge">RandonneeService</code> dans son constructeur via l’Injection de Dépendance. <em>(2 points)</em><br />
  <strong>Question 5 :</strong> Implémente une méthode <code class="language-plaintext highlighter-rouge">index()</code> qui :</p>
 <ul>
   <li>Récupère la liste des randonnées via <code class="language-plaintext highlighter-rouge">RandonneeService</code>.</li>
@@ -440,8 +440,8 @@ Les autres membres peuvent ensuite <strong>ajouter des avis et des suggestions d
 
 <hr />
 
-<h3 id="-création-de-la-vue-indexbladephp-6-points"><strong> Création de la Vue <code class="language-plaintext highlighter-rouge">index.blade.php</code> (6 points)</strong></h3>
-<p> <strong>Question 6 :</strong> Crée une vue <code class="language-plaintext highlighter-rouge">resources/views/randonnees/index.blade.php</code> qui affiche les propositions de randonnée sous forme de tableau avec les colonnes suivantes :</p>
+<h3 id="création-de-la-vue-indexbladephp-6-points"><strong>Création de la Vue <code class="language-plaintext highlighter-rouge">index.blade.php</code> (6 points)</strong></h3>
+<p><strong>Question 6 :</strong> Crée une vue <code class="language-plaintext highlighter-rouge">resources/views/randonnees/index.blade.php</code> qui affiche les propositions de randonnée sous forme de tableau avec les colonnes suivantes :</p>
 <ul>
   <li><strong>Nom de la randonnée</strong>.</li>
   <li><strong>Nom du membre</strong> (<em>relation One-to-One</em>).</li>
@@ -450,12 +450,12 @@ Les autres membres peuvent ensuite <strong>ajouter des avis et des suggestions d
   <li><strong>Liste des suggestions d’amélioration associées aux avis</strong> (<em>relation Many-to-Many</em>). <em>(4 points)</em></li>
 </ul>
 
-<p> <strong>Question 7 :</strong> Tester le bon fonctionnement de l’affichage et s’assurer que les vues des randonnées et des avis sont bien incrémentées après chaque rafraîchissement de la page. <em>(2 points)</em></p>
+<p><strong>Question 7 :</strong> Tester le bon fonctionnement de l’affichage et s’assurer que les vues des randonnées et des avis sont bien incrémentées après chaque rafraîchissement de la page. <em>(2 points)</em></p>
 
 <hr />
 
-<h3 id="4️⃣-définition-de-la-route-et-test-2-points"><strong>Définition de la Route et Test (2 points)</strong></h3>
-<p> <strong>Question 8 :</strong> Déclare une route <code class="language-plaintext highlighter-rouge">/randonnees</code> dans <code class="language-plaintext highlighter-rouge">routes/web.php</code> pour appeler la méthode <code class="language-plaintext highlighter-rouge">index()</code> du <code class="language-plaintext highlighter-rouge">RandonneeController</code>. <em>(1 point)</em><br />
+<h3 id="définition-de-la-route-et-test-2-points"><strong>Définition de la Route et Test (2 points)</strong></h3>
+<p><strong>Question 8 :</strong> Déclare une route <code class="language-plaintext highlighter-rouge">/randonnees</code> dans <code class="language-plaintext highlighter-rouge">routes/web.php</code> pour appeler la méthode <code class="language-plaintext highlighter-rouge">index()</code> du <code class="language-plaintext highlighter-rouge">RandonneeController</code>. <em>(1 point)</em><br />
  <strong>Question 9 :</strong> Lancer l’application, tester l’affichage dans le navigateur et vérifier que :</p>
 <ul>
   <li>Les <strong>propositions de randonnées et leurs avis</strong> s’affichent correctement.</li>
@@ -466,7 +466,7 @@ Les autres membres peuvent ensuite <strong>ajouter des avis et des suggestions d
 <hr />
 
 <h1 id="partie-2--mini-projet-45-min---20-points"><strong>Partie 2 : Mini-Projet (45 min - 20 points)</strong></h1>
-<p> <strong>Objectif :</strong></p>
+<p><strong>Objectif :</strong></p>
 <ul>
   <li>Ajouter une fonctionnalité d’édition des suggestions associées aux avis.</li>
   <li>Permettre la suppression des avis.</li>
@@ -474,25 +474,25 @@ Les autres membres peuvent ensuite <strong>ajouter des avis et des suggestions d
 </ul>
 
 <h2 id="barème--questions-20-points-1"><strong>Barème &amp; Questions (20 points)</strong></h2>
-<h3 id="-modification-des-suggestions-dun-avis-8-points"><strong> Modification des suggestions d’un avis (8 points)</strong></h3>
-<p> <strong>Question 1 :</strong> Ajouter une méthode <code class="language-plaintext highlighter-rouge">updateAvisSuggestions(Avis $avis, array $suggestionsIds)</code> dans <code class="language-plaintext highlighter-rouge">RandonneeService</code> pour <strong>modifier les suggestions associées à un avis</strong>. <em>(3 points)</em><br />
- <strong>Question 2 :</strong> Créer une méthode <code class="language-plaintext highlighter-rouge">edit($id)</code> dans <code class="language-plaintext highlighter-rouge">AvisController</code> qui retourne un formulaire d’édition avec la liste des suggestions disponibles. <em>(2 points)</em><br />
- <strong>Question 3 :</strong> Implémenter une méthode <code class="language-plaintext highlighter-rouge">update(Request $request, $id)</code> dans <code class="language-plaintext highlighter-rouge">AvisController</code> qui met à jour les suggestions associées à un avis en utilisant <code class="language-plaintext highlighter-rouge">RandonneeService</code>. <em>(2 points)</em><br />
- <strong>Question 4 :</strong> Implémenter une méthode <code class="language-plaintext highlighter-rouge">show($id)</code> dans <code class="language-plaintext highlighter-rouge">ArticleController</code>. <em>(1 points)</em></p>
+<h3 id="-modification-des-suggestions-dun-avis-8-points">** Modification des suggestions d’un avis (8 points)**</h3>
+<p><strong>Question 10 :</strong> Ajouter une méthode <code class="language-plaintext highlighter-rouge">updateAvisSuggestions(Avis $avis, array $suggestionsIds)</code> dans <code class="language-plaintext highlighter-rouge">RandonneeService</code> pour <strong>modifier les suggestions associées à un avis</strong>. <em>(3 points)</em><br />
+ <strong>Question 11 :</strong> Créer une méthode <code class="language-plaintext highlighter-rouge">edit($id)</code> dans <code class="language-plaintext highlighter-rouge">AvisController</code> qui retourne un formulaire d’édition avec la liste des suggestions disponibles. <em>(2 points)</em><br />
+ <strong>Question 12 :</strong> Implémenter une méthode <code class="language-plaintext highlighter-rouge">update(Request $request, $id)</code> dans <code class="language-plaintext highlighter-rouge">AvisController</code> qui met à jour les suggestions associées à un avis en utilisant <code class="language-plaintext highlighter-rouge">RandonneeService</code>. <em>(2 points)</em><br />
+ <strong>Question 13 :</strong> Implémenter une méthode <code class="language-plaintext highlighter-rouge">show($id)</code> dans <code class="language-plaintext highlighter-rouge">ArticleController</code>. <em>(1 points)</em></p>
 
 <hr />
 
-<h3 id="2️⃣-ajout-des-boutons-modifier-et-supprimer-6-points"><strong>Ajout des boutons “Modifier” et “Supprimer” (6 points)</strong></h3>
-<p> <strong>Question 4 :</strong> Ajouter dans <code class="language-plaintext highlighter-rouge">index.blade.php</code> une colonne avec <strong>un bouton “Modifier” redirigeant vers la page d’édition</strong> de l’avis. <em>(2 points)</em><br />
- <strong>Question 5 :</strong> Ajouter <strong>un bouton “Supprimer” avec un formulaire <code class="language-plaintext highlighter-rouge">DELETE</code></strong> pour supprimer un avis. <em>(2 points)</em><br />
- <strong>Question 6 :</strong> Implémenter la méthode <code class="language-plaintext highlighter-rouge">destroy($id)</code> dans <code class="language-plaintext highlighter-rouge">AvisController</code> pour gérer la suppression d’un avis. <em>(2 points)</em></p>
+<h3 id="ajout-des-boutons-modifier-et-supprimer-6-points"><strong>Ajout des boutons “Modifier” et “Supprimer” (6 points)</strong></h3>
+<p><strong>Question 14 :</strong> Ajouter dans <code class="language-plaintext highlighter-rouge">index.blade.php</code> une colonne avec <strong>un bouton “Modifier” redirigeant vers la page d’édition</strong> de l’avis. <em>(2 points)</em><br />
+ <strong>Question 15 :</strong> Ajouter <strong>un bouton “Supprimer” avec un formulaire <code class="language-plaintext highlighter-rouge">DELETE</code></strong> pour supprimer un avis. <em>(2 points)</em><br />
+ <strong>Question 16 :</strong> Implémenter la méthode <code class="language-plaintext highlighter-rouge">destroy($id)</code> dans <code class="language-plaintext highlighter-rouge">AvisController</code> pour gérer la suppression d’un avis. <em>(2 points)</em></p>
 
 <hr />
 
-<h3 id="-amélioration-de-laffichage-avec-du-css-6-points"><strong> Amélioration de l’affichage avec du CSS (6 points)</strong></h3>
-<p> <strong>Question 7 :</strong> Modifier <code class="language-plaintext highlighter-rouge">index.blade.php</code> pour afficher les randonnées et les avis sous forme de <strong>tableau stylisé</strong> en ajoutant un fichier CSS. <em>(2 points)</em><br />
- <strong>Question 8 :</strong> Améliorer le <strong>formulaire d’édition</strong> pour qu’il soit plus clair et agréable visuellement. <em>(2 points)</em><br />
- <strong>Question 9 :</strong> Vérifier que les boutons sont bien alignés et que l’affichage est <strong>responsive</strong>. <em>(2 points)</em></p>
+<h3 id="-amélioration-de-laffichage-avec-du-css-6-points">** Amélioration de l’affichage avec du CSS (6 points)**</h3>
+<p><strong>Question 17 :</strong> Modifier <code class="language-plaintext highlighter-rouge">index.blade.php</code> pour afficher les randonnées et les avis sous forme de <strong>tableau stylisé</strong> en ajoutant un fichier CSS. <em>(2 points)</em><br />
+ <strong>Question 18 :</strong> Améliorer le <strong>formulaire d’édition</strong> pour qu’il soit plus clair et agréable visuellement. <em>(2 points)</em><br />
+ <strong>Question 19 :</strong> Vérifier que les boutons sont bien alignés et que l’affichage est <strong>responsive</strong>. <em>(2 points)</em></p>
 
 <hr />
 
@@ -557,7 +557,7 @@ Les autres joueurs peuvent ensuite <strong>donner leur avis</strong> sur la stra
 <p>L’examen est divisé en <strong>deux parties</strong> :</p>
 
 <ol>
-  <li><strong> Partie 1 : Live Coding (30 minutes, 20 points)</strong>
+  <li><strong>Partie 1 : Live Coding (30 minutes, 20 points)</strong>
     <ul>
       <li>Affichage des stratégies d’entraînement avec leurs avis.</li>
       <li>Incrémentation du nombre de vues d’une stratégie et de ses avis via un Service.</li>
@@ -575,8 +575,8 @@ Les autres joueurs peuvent ensuite <strong>donner leur avis</strong> sur la stra
 
 <hr />
 
-<h1 id="-partie-1--live-coding-30-min---20-points"><strong> Partie 1 : Live Coding (30 min - 20 points)</strong></h1>
-<p> <strong>Objectif :</strong></p>
+<h1 id="partie-1--live-coding-30-min---20-points"><strong>Partie 1 : Live Coding (30 min - 20 points)</strong></h1>
+<p><strong>Objectif :</strong></p>
 <ul>
   <li>Afficher la liste des stratégies d’entraînement avec leurs avis.</li>
   <li>Gérer le nombre de vues des stratégies et des avis.</li>
@@ -584,15 +584,15 @@ Les autres joueurs peuvent ensuite <strong>donner leur avis</strong> sur la stra
 </ul>
 
 <h2 id="barème--questions-20-points"><strong>Barème &amp; Questions (20 points)</strong></h2>
-<h3 id="-création-de-la-classe-strategieservice-6-points"><strong> Création de la classe <code class="language-plaintext highlighter-rouge">StrategieService</code> (6 points)</strong></h3>
-<p> <strong>Question 1 :</strong> Crée une classe <code class="language-plaintext highlighter-rouge">StrategieService</code> dans <code class="language-plaintext highlighter-rouge">app/Services/</code> et ajoute une méthode <code class="language-plaintext highlighter-rouge">getStrategiesWithAvis()</code> qui retourne la liste des stratégies avec leurs relations (<code class="language-plaintext highlighter-rouge">joueur</code>, <code class="language-plaintext highlighter-rouge">avis</code>, <code class="language-plaintext highlighter-rouge">typeFeedback</code>). <em>(2 points)</em><br />
+<h3 id="création-de-la-classe-strategieservice-6-points"><strong>Création de la classe <code class="language-plaintext highlighter-rouge">StrategieService</code> (6 points)</strong></h3>
+<p><strong>Question 1 :</strong> Crée une classe <code class="language-plaintext highlighter-rouge">StrategieService</code> dans <code class="language-plaintext highlighter-rouge">app/Services/</code> et ajoute une méthode <code class="language-plaintext highlighter-rouge">getStrategiesWithAvis()</code> qui retourne la liste des stratégies avec leurs relations (<code class="language-plaintext highlighter-rouge">joueur</code>, <code class="language-plaintext highlighter-rouge">avis</code>, <code class="language-plaintext highlighter-rouge">typeFeedback</code>). <em>(2 points)</em><br />
  <strong>Question 2 :</strong> Ajoute une méthode <code class="language-plaintext highlighter-rouge">incrementStrategieViews(Strategie $strategie)</code> qui <strong>incrémente le nombre de vues</strong> de la stratégie et sauvegarde la modification. <em>(2 points)</em><br />
  <strong>Question 3 :</strong> Ajoute une méthode <code class="language-plaintext highlighter-rouge">incrementAvisViews(Strategie $strategie)</code> qui <strong>incrémente le nombre de vues de chaque avis lié à cette stratégie</strong> et sauvegarde les modifications. <em>(2 points)</em></p>
 
 <hr />
 
-<h3 id="2️⃣-implémentation-du-strategiecontroller-6-points"><strong>Implémentation du <code class="language-plaintext highlighter-rouge">StrategieController</code> (6 points)</strong></h3>
-<p> <strong>Question 4 :</strong> Crée un contrôleur <code class="language-plaintext highlighter-rouge">StrategieController</code> et injecte <code class="language-plaintext highlighter-rouge">StrategieService</code> dans son constructeur via l’Injection de Dépendance. <em>(2 points)</em><br />
+<h3 id="implémentation-du-strategiecontroller-6-points"><strong>Implémentation du <code class="language-plaintext highlighter-rouge">StrategieController</code> (6 points)</strong></h3>
+<p><strong>Question 4 :</strong> Crée un contrôleur <code class="language-plaintext highlighter-rouge">StrategieController</code> et injecte <code class="language-plaintext highlighter-rouge">StrategieService</code> dans son constructeur via l’Injection de Dépendance. <em>(2 points)</em><br />
  <strong>Question 5 :</strong> Implémente une méthode <code class="language-plaintext highlighter-rouge">index()</code> qui :</p>
 <ul>
   <li>Récupère la liste des stratégies via <code class="language-plaintext highlighter-rouge">StrategieService</code>.</li>
@@ -602,8 +602,8 @@ Les autres joueurs peuvent ensuite <strong>donner leur avis</strong> sur la stra
 
 <hr />
 
-<h3 id="-création-de-la-vue-indexbladephp-6-points"><strong> Création de la Vue <code class="language-plaintext highlighter-rouge">index.blade.php</code> (6 points)</strong></h3>
-<p> <strong>Question 6 :</strong> Crée une vue <code class="language-plaintext highlighter-rouge">resources/views/strategies/index.blade.php</code> qui affiche les stratégies sous forme de tableau avec les colonnes suivantes :</p>
+<h3 id="création-de-la-vue-indexbladephp-6-points"><strong>Création de la Vue <code class="language-plaintext highlighter-rouge">index.blade.php</code> (6 points)</strong></h3>
+<p><strong>Question 6 :</strong> Crée une vue <code class="language-plaintext highlighter-rouge">resources/views/strategies/index.blade.php</code> qui affiche les stratégies sous forme de tableau avec les colonnes suivantes :</p>
 <ul>
   <li><strong>Nom de la stratégie</strong>.</li>
   <li><strong>Nom du joueur</strong> (<em>relation One-to-One</em>).</li>
@@ -612,12 +612,12 @@ Les autres joueurs peuvent ensuite <strong>donner leur avis</strong> sur la stra
   <li><strong>Liste des feedbacks associés aux avis</strong> (<em>relation Many-to-Many</em>). <em>(4 points)</em></li>
 </ul>
 
-<p> <strong>Question 7 :</strong> Tester le bon fonctionnement de l’affichage et s’assurer que les vues des stratégies et des avis sont bien incrémentées après chaque rafraîchissement de la page. <em>(2 points)</em></p>
+<p><strong>Question 7 :</strong> Tester le bon fonctionnement de l’affichage et s’assurer que les vues des stratégies et des avis sont bien incrémentées après chaque rafraîchissement de la page. <em>(2 points)</em></p>
 
 <hr />
 
-<h3 id="4️⃣-définition-de-la-route-et-test-2-points"><strong>Définition de la Route et Test (2 points)</strong></h3>
-<p> <strong>Question 8 :</strong> Déclare une route <code class="language-plaintext highlighter-rouge">/strategies</code> dans <code class="language-plaintext highlighter-rouge">routes/web.php</code> pour appeler la méthode <code class="language-plaintext highlighter-rouge">index()</code> du <code class="language-plaintext highlighter-rouge">StrategieController</code>. <em>(1 point)</em><br />
+<h3 id="définition-de-la-route-et-test-2-points"><strong>Définition de la Route et Test (2 points)</strong></h3>
+<p><strong>Question 8 :</strong> Déclare une route <code class="language-plaintext highlighter-rouge">/strategies</code> dans <code class="language-plaintext highlighter-rouge">routes/web.php</code> pour appeler la méthode <code class="language-plaintext highlighter-rouge">index()</code> du <code class="language-plaintext highlighter-rouge">StrategieController</code>. <em>(1 point)</em><br />
  <strong>Question 9 :</strong> Lancer l’application, tester l’affichage dans le navigateur et vérifier que :</p>
 <ul>
   <li>Les <strong>stratégies d’entraînement et leurs avis</strong> s’affichent correctement.</li>
@@ -628,7 +628,7 @@ Les autres joueurs peuvent ensuite <strong>donner leur avis</strong> sur la stra
 <hr />
 
 <h1 id="partie-2--mini-projet-45-min---20-points"><strong>Partie 2 : Mini-Projet (45 min - 20 points)</strong></h1>
-<p> <strong>Objectif :</strong></p>
+<p><strong>Objectif :</strong></p>
 <ul>
   <li>Ajouter une fonctionnalité d’édition des feedbacks associés aux avis.</li>
   <li>Permettre la suppression des avis.</li>
@@ -636,25 +636,25 @@ Les autres joueurs peuvent ensuite <strong>donner leur avis</strong> sur la stra
 </ul>
 
 <h2 id="barème--questions-20-points-1"><strong>Barème &amp; Questions (20 points)</strong></h2>
-<h3 id="-modification-des-feedbacks-dun-avis-8-points"><strong> Modification des feedbacks d’un avis (8 points)</strong></h3>
-<p> <strong>Question 1 :</strong> Ajouter une méthode <code class="language-plaintext highlighter-rouge">updateAvisFeedback(Avis $avis, array $feedbackIds)</code> dans <code class="language-plaintext highlighter-rouge">StrategieService</code> pour <strong>modifier les feedbacks associés à un avis</strong>. <em>(3 points)</em><br />
- <strong>Question 2 :</strong> Créer une méthode <code class="language-plaintext highlighter-rouge">edit($id)</code> dans <code class="language-plaintext highlighter-rouge">AvisController</code> qui retourne un formulaire d’édition avec la liste des feedbacks disponibles. <em>(2 points)</em><br />
- <strong>Question 3 :</strong> Implémenter une méthode <code class="language-plaintext highlighter-rouge">update(Request $request, $id)</code> dans <code class="language-plaintext highlighter-rouge">AvisController</code> qui met à jour les feedbacks d’un avis en utilisant <code class="language-plaintext highlighter-rouge">StrategieService</code>. <em>(2 points)</em><br />
- <strong>Question 4 :</strong> Implémenter une méthode <code class="language-plaintext highlighter-rouge">show($id)</code> dans <code class="language-plaintext highlighter-rouge">ArticleController</code>. <em>(1 points)</em></p>
+<h3 id="-modification-des-feedbacks-dun-avis-8-points">** Modification des feedbacks d’un avis (8 points)**</h3>
+<p><strong>Question 10 :</strong> Ajouter une méthode <code class="language-plaintext highlighter-rouge">updateAvisFeedback(Avis $avis, array $feedbackIds)</code> dans <code class="language-plaintext highlighter-rouge">StrategieService</code> pour <strong>modifier les feedbacks associés à un avis</strong>. <em>(3 points)</em><br />
+ <strong>Question 11 :</strong> Créer une méthode <code class="language-plaintext highlighter-rouge">edit($id)</code> dans <code class="language-plaintext highlighter-rouge">AvisController</code> qui retourne un formulaire d’édition avec la liste des feedbacks disponibles. <em>(2 points)</em><br />
+ <strong>Question 12 :</strong> Implémenter une méthode <code class="language-plaintext highlighter-rouge">update(Request $request, $id)</code> dans <code class="language-plaintext highlighter-rouge">AvisController</code> qui met à jour les feedbacks d’un avis en utilisant <code class="language-plaintext highlighter-rouge">StrategieService</code>. <em>(2 points)</em><br />
+ <strong>Question 13 :</strong> Implémenter une méthode <code class="language-plaintext highlighter-rouge">show($id)</code> dans <code class="language-plaintext highlighter-rouge">ArticleController</code>. <em>(1 points)</em></p>
 
 <hr />
 
-<h3 id="2️⃣-ajout-des-boutons-modifier-et-supprimer-6-points"><strong>Ajout des boutons “Modifier” et “Supprimer” (6 points)</strong></h3>
-<p> <strong>Question 4 :</strong> Ajouter dans <code class="language-plaintext highlighter-rouge">index.blade.php</code> une colonne avec <strong>un bouton “Modifier” redirigeant vers la page d’édition</strong> de l’avis. <em>(2 points)</em><br />
- <strong>Question 5 :</strong> Ajouter <strong>un bouton “Supprimer” avec un formulaire <code class="language-plaintext highlighter-rouge">DELETE</code></strong> pour supprimer un avis. <em>(2 points)</em><br />
- <strong>Question 6 :</strong> Implémenter la méthode <code class="language-plaintext highlighter-rouge">destroy($id)</code> dans <code class="language-plaintext highlighter-rouge">AvisController</code> pour gérer la suppression d’un avis. <em>(2 points)</em></p>
+<h3 id="ajout-des-boutons-modifier-et-supprimer-6-points"><strong>Ajout des boutons “Modifier” et “Supprimer” (6 points)</strong></h3>
+<p><strong>Question 14 :</strong> Ajouter dans <code class="language-plaintext highlighter-rouge">index.blade.php</code> une colonne avec <strong>un bouton “Modifier” redirigeant vers la page d’édition</strong> de l’avis. <em>(2 points)</em><br />
+ <strong>Question 15 :</strong> Ajouter <strong>un bouton “Supprimer” avec un formulaire <code class="language-plaintext highlighter-rouge">DELETE</code></strong> pour supprimer un avis. <em>(2 points)</em><br />
+ <strong>Question 16 :</strong> Implémenter la méthode <code class="language-plaintext highlighter-rouge">destroy($id)</code> dans <code class="language-plaintext highlighter-rouge">AvisController</code> pour gérer la suppression d’un avis. <em>(2 points)</em></p>
 
 <hr />
 
-<h3 id="-amélioration-de-laffichage-avec-du-css-6-points"><strong> Amélioration de l’affichage avec du CSS (6 points)</strong></h3>
-<p> <strong>Question 7 :</strong> Modifier <code class="language-plaintext highlighter-rouge">index.blade.php</code> pour afficher les stratégies et les avis sous forme de <strong>tableau stylisé</strong> en ajoutant un fichier CSS. <em>(2 points)</em><br />
- <strong>Question 8 :</strong> Améliorer le <strong>formulaire d’édition</strong> pour qu’il soit plus clair et agréable visuellement. <em>(2 points)</em><br />
- <strong>Question 9 :</strong> Vérifier que les boutons sont bien alignés et que l’affichage est <strong>responsive</strong>. <em>(2 points)</em></p>
+<h3 id="-amélioration-de-laffichage-avec-du-css-6-points">** Amélioration de l’affichage avec du CSS (6 points)**</h3>
+<p><strong>Question 17 :</strong> Modifier <code class="language-plaintext highlighter-rouge">index.blade.php</code> pour afficher les stratégies et les avis sous forme de <strong>tableau stylisé</strong> en ajoutant un fichier CSS. <em>(2 points)</em><br />
+ <strong>Question 18 :</strong> Améliorer le <strong>formulaire d’édition</strong> pour qu’il soit plus clair et agréable visuellement. <em>(2 points)</em><br />
+ <strong>Question 19 :</strong> Vérifier que les boutons sont bien alignés et que l’affichage est <strong>responsive</strong>. <em>(2 points)</em></p>
 
 <hr />
 
@@ -719,7 +719,7 @@ Les autres utilisateurs peuvent ensuite <strong>donner leur avis et des suggesti
 <p>L’examen est divisé en <strong>deux parties</strong> :</p>
 
 <ol>
-  <li><strong> Partie 1 : Live Coding (30 minutes, 20 points)</strong>
+  <li><strong>Partie 1 : Live Coding (30 minutes, 20 points)</strong>
     <ul>
       <li>Affichage des recettes avec leurs avis.</li>
       <li>Incrémentation du nombre de vues d’une recette et de ses avis via un Service.</li>
@@ -737,8 +737,8 @@ Les autres utilisateurs peuvent ensuite <strong>donner leur avis et des suggesti
 
 <hr />
 
-<h1 id="-partie-1--live-coding-30-min---20-points"><strong> Partie 1 : Live Coding (30 min - 20 points)</strong></h1>
-<p> <strong>Objectif :</strong></p>
+<h1 id="partie-1--live-coding-30-min---20-points"><strong>Partie 1 : Live Coding (30 min - 20 points)</strong></h1>
+<p><strong>Objectif :</strong></p>
 <ul>
   <li>Afficher la liste des recettes avec leurs avis.</li>
   <li>Gérer le nombre de vues des recettes et des avis.</li>
@@ -746,15 +746,15 @@ Les autres utilisateurs peuvent ensuite <strong>donner leur avis et des suggesti
 </ul>
 
 <h2 id="barème--questions-20-points"><strong>Barème &amp; Questions (20 points)</strong></h2>
-<h3 id="-création-de-la-classe-recetteservice-6-points"><strong> Création de la classe <code class="language-plaintext highlighter-rouge">RecetteService</code> (6 points)</strong></h3>
-<p> <strong>Question 1 :</strong> Crée une classe <code class="language-plaintext highlighter-rouge">RecetteService</code> dans <code class="language-plaintext highlighter-rouge">app/Services/</code> et ajoute une méthode <code class="language-plaintext highlighter-rouge">getRecettesWithAvis()</code> qui retourne la liste des recettes avec leurs relations (<code class="language-plaintext highlighter-rouge">utilisateur</code>, <code class="language-plaintext highlighter-rouge">avis</code>, <code class="language-plaintext highlighter-rouge">suggestions</code>). <em>(2 points)</em><br />
+<h3 id="création-de-la-classe-recetteservice-6-points"><strong>Création de la classe <code class="language-plaintext highlighter-rouge">RecetteService</code> (6 points)</strong></h3>
+<p><strong>Question 1 :</strong> Crée une classe <code class="language-plaintext highlighter-rouge">RecetteService</code> dans <code class="language-plaintext highlighter-rouge">app/Services/</code> et ajoute une méthode <code class="language-plaintext highlighter-rouge">getRecettesWithAvis()</code> qui retourne la liste des recettes avec leurs relations (<code class="language-plaintext highlighter-rouge">utilisateur</code>, <code class="language-plaintext highlighter-rouge">avis</code>, <code class="language-plaintext highlighter-rouge">suggestions</code>). <em>(2 points)</em><br />
  <strong>Question 2 :</strong> Ajoute une méthode <code class="language-plaintext highlighter-rouge">incrementRecetteViews(Recette $recette)</code> qui <strong>incrémente le nombre de vues</strong> de la recette et sauvegarde la modification. <em>(2 points)</em><br />
  <strong>Question 3 :</strong> Ajoute une méthode <code class="language-plaintext highlighter-rouge">incrementAvisViews(Recette $recette)</code> qui <strong>incrémente le nombre de vues de chaque avis lié à cette recette</strong> et sauvegarde les modifications. <em>(2 points)</em></p>
 
 <hr />
 
-<h3 id="2️⃣-implémentation-du-recettecontroller-6-points"><strong>Implémentation du <code class="language-plaintext highlighter-rouge">RecetteController</code> (6 points)</strong></h3>
-<p> <strong>Question 4 :</strong> Crée un contrôleur <code class="language-plaintext highlighter-rouge">RecetteController</code> et injecte <code class="language-plaintext highlighter-rouge">RecetteService</code> dans son constructeur via l’Injection de Dépendance. <em>(2 points)</em><br />
+<h3 id="implémentation-du-recettecontroller-6-points"><strong>Implémentation du <code class="language-plaintext highlighter-rouge">RecetteController</code> (6 points)</strong></h3>
+<p><strong>Question 4 :</strong> Crée un contrôleur <code class="language-plaintext highlighter-rouge">RecetteController</code> et injecte <code class="language-plaintext highlighter-rouge">RecetteService</code> dans son constructeur via l’Injection de Dépendance. <em>(2 points)</em><br />
  <strong>Question 5 :</strong> Implémente une méthode <code class="language-plaintext highlighter-rouge">index()</code> qui :</p>
 <ul>
   <li>Récupère la liste des recettes via <code class="language-plaintext highlighter-rouge">RecetteService</code>.</li>
@@ -764,8 +764,8 @@ Les autres utilisateurs peuvent ensuite <strong>donner leur avis et des suggesti
 
 <hr />
 
-<h3 id="-création-de-la-vue-indexbladephp-6-points"><strong> Création de la Vue <code class="language-plaintext highlighter-rouge">index.blade.php</code> (6 points)</strong></h3>
-<p> <strong>Question 6 :</strong> Crée une vue <code class="language-plaintext highlighter-rouge">resources/views/recettes/index.blade.php</code> qui affiche les recettes sous forme de tableau avec les colonnes suivantes :</p>
+<h3 id="création-de-la-vue-indexbladephp-6-points"><strong>Création de la Vue <code class="language-plaintext highlighter-rouge">index.blade.php</code> (6 points)</strong></h3>
+<p><strong>Question 6 :</strong> Crée une vue <code class="language-plaintext highlighter-rouge">resources/views/recettes/index.blade.php</code> qui affiche les recettes sous forme de tableau avec les colonnes suivantes :</p>
 <ul>
   <li><strong>Nom de la recette</strong>.</li>
   <li><strong>Nom du cuisinier</strong> (<em>relation One-to-One</em>).</li>
@@ -774,12 +774,12 @@ Les autres utilisateurs peuvent ensuite <strong>donner leur avis et des suggesti
   <li><strong>Liste des suggestions d’amélioration associées aux avis</strong> (<em>relation Many-to-Many</em>). <em>(4 points)</em></li>
 </ul>
 
-<p> <strong>Question 7 :</strong> Tester le bon fonctionnement de l’affichage et s’assurer que les vues des recettes et des avis sont bien incrémentées après chaque rafraîchissement de la page. <em>(2 points)</em></p>
+<p><strong>Question 7 :</strong> Tester le bon fonctionnement de l’affichage et s’assurer que les vues des recettes et des avis sont bien incrémentées après chaque rafraîchissement de la page. <em>(2 points)</em></p>
 
 <hr />
 
-<h3 id="4️⃣-définition-de-la-route-et-test-2-points"><strong>Définition de la Route et Test (2 points)</strong></h3>
-<p> <strong>Question 8 :</strong> Déclare une route <code class="language-plaintext highlighter-rouge">/recettes</code> dans <code class="language-plaintext highlighter-rouge">routes/web.php</code> pour appeler la méthode <code class="language-plaintext highlighter-rouge">index()</code> du <code class="language-plaintext highlighter-rouge">RecetteController</code>. <em>(1 point)</em><br />
+<h3 id="définition-de-la-route-et-test-2-points"><strong>Définition de la Route et Test (2 points)</strong></h3>
+<p><strong>Question 8 :</strong> Déclare une route <code class="language-plaintext highlighter-rouge">/recettes</code> dans <code class="language-plaintext highlighter-rouge">routes/web.php</code> pour appeler la méthode <code class="language-plaintext highlighter-rouge">index()</code> du <code class="language-plaintext highlighter-rouge">RecetteController</code>. <em>(1 point)</em><br />
  <strong>Question 9 :</strong> Lancer l’application, tester l’affichage dans le navigateur et vérifier que :</p>
 <ul>
   <li>Les <strong>recettes et leurs avis</strong> s’affichent correctement.</li>
@@ -790,7 +790,7 @@ Les autres utilisateurs peuvent ensuite <strong>donner leur avis et des suggesti
 <hr />
 
 <h1 id="partie-2--mini-projet-45-min---20-points"><strong>Partie 2 : Mini-Projet (45 min - 20 points)</strong></h1>
-<p> <strong>Objectif :</strong></p>
+<p><strong>Objectif :</strong></p>
 <ul>
   <li>Ajouter une fonctionnalité d’édition des suggestions associées aux avis.</li>
   <li>Permettre la suppression des avis.</li>
@@ -798,25 +798,25 @@ Les autres utilisateurs peuvent ensuite <strong>donner leur avis et des suggesti
 </ul>
 
 <h2 id="barème--questions-20-points-1"><strong>Barème &amp; Questions (20 points)</strong></h2>
-<h3 id="-modification-des-suggestions-dun-avis-8-points"><strong> Modification des suggestions d’un avis (8 points)</strong></h3>
-<p> <strong>Question 1 :</strong> Ajouter une méthode <code class="language-plaintext highlighter-rouge">updateAvisSuggestions(Avis $avis, array $suggestionsIds)</code> dans <code class="language-plaintext highlighter-rouge">RecetteService</code> pour <strong>modifier les suggestions associées à un avis</strong>. <em>(3 points)</em><br />
- <strong>Question 2 :</strong> Créer une méthode <code class="language-plaintext highlighter-rouge">edit($id)</code> dans <code class="language-plaintext highlighter-rouge">AvisController</code> qui retourne un formulaire d’édition avec la liste des suggestions disponibles. <em>(2 points)</em><br />
- <strong>Question 3 :</strong> Implémenter une méthode <code class="language-plaintext highlighter-rouge">update(Request $request, $id)</code> dans <code class="language-plaintext highlighter-rouge">AvisController</code> qui met à jour les suggestions associées à un avis en utilisant <code class="language-plaintext highlighter-rouge">RecetteService</code>. <em>(2 points)</em><br />
- <strong>Question 4 :</strong> Implémenter une méthode <code class="language-plaintext highlighter-rouge">show($id)</code> dans <code class="language-plaintext highlighter-rouge">ArticleController</code>. <em>(1 points)</em></p>
+<h3 id="-modification-des-suggestions-dun-avis-8-points">** Modification des suggestions d’un avis (8 points)**</h3>
+<p><strong>Question 10 :</strong> Ajouter une méthode <code class="language-plaintext highlighter-rouge">updateAvisSuggestions(Avis $avis, array $suggestionsIds)</code> dans <code class="language-plaintext highlighter-rouge">RecetteService</code> pour <strong>modifier les suggestions associées à un avis</strong>. <em>(3 points)</em><br />
+ <strong>Question 11 :</strong> Créer une méthode <code class="language-plaintext highlighter-rouge">edit($id)</code> dans <code class="language-plaintext highlighter-rouge">AvisController</code> qui retourne un formulaire d’édition avec la liste des suggestions disponibles. <em>(2 points)</em><br />
+ <strong>Question 12 :</strong> Implémenter une méthode <code class="language-plaintext highlighter-rouge">update(Request $request, $id)</code> dans <code class="language-plaintext highlighter-rouge">AvisController</code> qui met à jour les suggestions associées à un avis en utilisant <code class="language-plaintext highlighter-rouge">RecetteService</code>. <em>(2 points)</em><br />
+ <strong>Question 13 :</strong> Implémenter une méthode <code class="language-plaintext highlighter-rouge">show($id)</code> dans <code class="language-plaintext highlighter-rouge">ArticleController</code>. <em>(1 points)</em></p>
 
 <hr />
 
-<h3 id="2️⃣-ajout-des-boutons-modifier-et-supprimer-6-points"><strong>Ajout des boutons “Modifier” et “Supprimer” (6 points)</strong></h3>
-<p> <strong>Question 4 :</strong> Ajouter dans <code class="language-plaintext highlighter-rouge">index.blade.php</code> une colonne avec <strong>un bouton “Modifier” redirigeant vers la page d’édition</strong> de l’avis. <em>(2 points)</em><br />
- <strong>Question 5 :</strong> Ajouter <strong>un bouton “Supprimer” avec un formulaire <code class="language-plaintext highlighter-rouge">DELETE</code></strong> pour supprimer un avis. <em>(2 points)</em><br />
- <strong>Question 6 :</strong> Implémenter la méthode <code class="language-plaintext highlighter-rouge">destroy($id)</code> dans <code class="language-plaintext highlighter-rouge">AvisController</code> pour gérer la suppression d’un avis. <em>(2 points)</em></p>
+<h3 id="ajout-des-boutons-modifier-et-supprimer-6-points"><strong>Ajout des boutons “Modifier” et “Supprimer” (6 points)</strong></h3>
+<p><strong>Question 14 :</strong> Ajouter dans <code class="language-plaintext highlighter-rouge">index.blade.php</code> une colonne avec <strong>un bouton “Modifier” redirigeant vers la page d’édition</strong> de l’avis. <em>(2 points)</em><br />
+ <strong>Question 15 :</strong> Ajouter <strong>un bouton “Supprimer” avec un formulaire <code class="language-plaintext highlighter-rouge">DELETE</code></strong> pour supprimer un avis. <em>(2 points)</em><br />
+ <strong>Question 16 :</strong> Implémenter la méthode <code class="language-plaintext highlighter-rouge">destroy($id)</code> dans <code class="language-plaintext highlighter-rouge">AvisController</code> pour gérer la suppression d’un avis. <em>(2 points)</em></p>
 
 <hr />
 
-<h3 id="-amélioration-de-laffichage-avec-du-css-6-points"><strong> Amélioration de l’affichage avec du CSS (6 points)</strong></h3>
-<p> <strong>Question 7 :</strong> Modifier <code class="language-plaintext highlighter-rouge">index.blade.php</code> pour afficher les recettes et les avis sous forme de <strong>tableau stylisé</strong> en ajoutant un fichier CSS. <em>(2 points)</em><br />
- <strong>Question 8 :</strong> Améliorer le <strong>formulaire d’édition</strong> pour qu’il soit plus clair et agréable visuellement. <em>(2 points)</em><br />
- <strong>Question 9 :</strong> Vérifier que les boutons sont bien alignés et que l’affichage est <strong>responsive</strong>. <em>(2 points)</em></p>
+<h3 id="-amélioration-de-laffichage-avec-du-css-6-points">** Amélioration de l’affichage avec du CSS (6 points)**</h3>
+<p><strong>Question 17 :</strong> Modifier <code class="language-plaintext highlighter-rouge">index.blade.php</code> pour afficher les recettes et les avis sous forme de <strong>tableau stylisé</strong> en ajoutant un fichier CSS. <em>(2 points)</em><br />
+ <strong>Question 18 :</strong> Améliorer le <strong>formulaire d’édition</strong> pour qu’il soit plus clair et agréable visuellement. <em>(2 points)</em><br />
+ <strong>Question 19 :</strong> Vérifier que les boutons sont bien alignés et que l’affichage est <strong>responsive</strong>. <em>(2 points)</em></p>
 
 <hr />
 
