@@ -7,4 +7,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/images', [ImageMotivationController::class, 'index']);
+Route::get('/images', [ImageMotivationController::class, 'index'])->name('images.index');
+Route::get('/images{id}', [ImageMotivationController::class, 'show'])->name('images.show');
