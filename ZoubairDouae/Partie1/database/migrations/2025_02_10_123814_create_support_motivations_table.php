@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('support_motivations', function (Blueprint $table) {
             $table->id();
             $table->text('content');
-            $table->foreignId('image_id')->constrained('image_motivations')->onDelete('cascade');
+            $table->foreignId('image_motivation_id')->constrained('image_motivations')->onDelete('cascade');
             $table->integer('views')->default(0);
             $table->integer('reactions')->default(0);
             $table->timestamps();
