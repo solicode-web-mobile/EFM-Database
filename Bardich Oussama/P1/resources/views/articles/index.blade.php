@@ -16,6 +16,29 @@
             </tr>
         </thead>
         <tbody>
+            @foreach ($articles as $article)
+            <tr>
+                <td>{{ $article->title }}</td>
+                <td>{{ $article->user->name }}</td>
+                <td>{{ $article->view_counter }}</td>
+                <td>
+                    <ul>
+                        @foreach ($article->comments as $comment)
+                      <li>{{ $comment->content }}  View : {{ $comment->view_counter }}</li>
+                        @endforeach
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        @foreach ($article->categories as $category)
+                        <li>{{ $category->name }}</li>
+                      
+                        @endforeach
+                    </ul>
+                </td>
+            </tr>
+            @endforeach
+            
         
         </tbody>
     </table>
