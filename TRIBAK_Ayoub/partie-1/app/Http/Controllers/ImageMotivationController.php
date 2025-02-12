@@ -25,8 +25,8 @@ class ImageMotivationController extends Controller
 
             foreach ($image->supportMotivations as $support) {
                 if ($support->reactions > 5 && !$support->typeMotivations->contains('name', 'Encouragement')) {
-                    $support->typeMotivations()->attach(TypeMotivation::firstOrCreate(['name' => 'Encouragement']));
-                }
+                    $typeMotivation = new TypeMotivation(['name' => 'Encouragement']); 
+                    $support->typeMotivations->push($typeMotivation);                }
             }
         }
 
