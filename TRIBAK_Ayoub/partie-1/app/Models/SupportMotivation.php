@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class SupportMotivation extends Model
 {
-    protected $fillable = ['content','image_id', 'views', 'reactions'];
+    protected $fillable = ['content','image_motivation_id', 'views', 'reactions'];
 }
