@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Service\ArticleService;
 
@@ -39,32 +40,47 @@ class ArticleController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Article $article)
+    public function show(string $id)
     {
-        //
+        $article = Article::find($id);
+        $this->articleService->incrementArticleViews($article);
+        $this->articleService->incrementCommentViews($article);
+        return view('articles.show',compact('article'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Article $article)
+    public function edit(string $id)
     {
-        //
+        $article = Article::find($id);
+        $article->load('categories');
+        $categories = Category::all();
+        return view('articles.edit', compact('article','categories'));
+
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Article $article)
+    public function update(Request $request, string $id)
     {
-        //
+        $validatedata = $request->validate([
+            'categories'   => ['required', 'array'], 
+            'categories.*' => ['exists:categories,id'],
+        ]);
+        $article = Article::find($id);
+        $this->articleService->updateArticleCategories($article, $validatedata['categories']);
+        return redirect()->route('articles.index',$id);
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Article $article)
+    public function destroy(string $id)
     {
-        //
+        $article = Article::find($id);
+        $article->delete();
+        return redirect()->route('articles.index',$id);
     }
 }
