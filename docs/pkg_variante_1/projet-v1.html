@@ -94,7 +94,7 @@
 <h1 id="partie-1--live-coding-30-min---20-points"><strong>Partie 1 : Live Coding (30 min - 20 points)</strong></h1>
 
 <h2 id="barème--questions-20-points"><strong>Barème &amp; Questions (20 points)</strong></h2>
-<h3 id="-création-de-la-classe-articleservice-6-points">** Création de la classe <code class="language-plaintext highlighter-rouge">ArticleService</code> (6 points)**</h3>
+<h3 id="création-de-la-classe-articleservice-6-points"><strong>Création de la classe <code class="language-plaintext highlighter-rouge">ArticleService</code> (6 points)</strong></h3>
 <ul>
   <li>
     <p><strong>Question 1 :</strong> Crée une classe <code class="language-plaintext highlighter-rouge">ArticleService</code> dans <code class="language-plaintext highlighter-rouge">app/Services/</code> et ajoute une méthode <code class="language-plaintext highlighter-rouge">getArticlesWithRelations()</code> qui retourne la liste des articles avec leurs relations (<code class="language-plaintext highlighter-rouge">user</code>, <code class="language-plaintext highlighter-rouge">comments</code>, <code class="language-plaintext highlighter-rouge">categories</code>). <em>(2 points)</em></p>
@@ -150,20 +150,20 @@
 
 <h2 id="barème--questions-20-points-1"><strong>Barème &amp; Questions (20 points)</strong></h2>
 <h3 id="-modification-des-catégories-dun-article-many-to-many-8-points">** Modification des catégories d’un article (Many-to-Many) (8 points)**</h3>
-<p><strong>Question 1 :</strong> Ajouter une méthode <code class="language-plaintext highlighter-rouge">updateArticleCategories(Article $article, array $categoryIds)</code> dans <code class="language-plaintext highlighter-rouge">ArticleService</code> pour <strong>modifier les catégories associées à un article</strong>. <em>(3 points)</em><br />
- <strong>Question 2 :</strong> Créer une méthode <code class="language-plaintext highlighter-rouge">edit($id)</code> dans <code class="language-plaintext highlighter-rouge">ArticleController</code> qui retourne un formulaire d’édition avec la liste des catégories disponibles et celles déjà attachées à l’article. <em>(2 points)</em><br />
- <strong>Question 3 :</strong> Implémenter une méthode <code class="language-plaintext highlighter-rouge">update(Request $request, $id)</code> dans <code class="language-plaintext highlighter-rouge">ArticleController</code> qui met à jour les catégories d’un article en utilisant <code class="language-plaintext highlighter-rouge">ArticleService</code>. <em>(2 points)</em><br />
- <strong>Question 4 :</strong> Implémenter une méthode <code class="language-plaintext highlighter-rouge">show($id)</code> dans <code class="language-plaintext highlighter-rouge">ArticleController</code>. <em>(1 points)</em></p>
+<p><strong>Question 10 :</strong> Ajouter une méthode <code class="language-plaintext highlighter-rouge">updateArticleCategories(Article $article, array $categoryIds)</code> dans <code class="language-plaintext highlighter-rouge">ArticleService</code> pour <strong>modifier les catégories associées à un article</strong>. <em>(3 points)</em><br />
+ <strong>Question 11 :</strong> Créer une méthode <code class="language-plaintext highlighter-rouge">edit($id)</code> dans <code class="language-plaintext highlighter-rouge">ArticleController</code> qui retourne un formulaire d’édition avec la liste des catégories disponibles et celles déjà attachées à l’article. <em>(2 points)</em><br />
+ <strong>Question 12 :</strong> Implémenter une méthode <code class="language-plaintext highlighter-rouge">update(Request $request, $id)</code> dans <code class="language-plaintext highlighter-rouge">ArticleController</code> qui met à jour les catégories d’un article en utilisant <code class="language-plaintext highlighter-rouge">ArticleService</code>. <em>(2 points)</em><br />
+ <strong>Question 13 :</strong> Implémenter une méthode <code class="language-plaintext highlighter-rouge">show($id)</code> dans <code class="language-plaintext highlighter-rouge">ArticleController</code>. <em>(1 points)</em></p>
 
 <h3 id="ajout-des-boutons-modifier-et-supprimer-6-points"><strong>Ajout des boutons “Modifier” et “Supprimer” (6 points)</strong></h3>
-<p><strong>Question 4 :</strong> Ajouter dans <code class="language-plaintext highlighter-rouge">index.blade.php</code> une colonne avec <strong>un bouton “Modifier” redirigeant vers la page d’édition</strong> de l’article. <em>(2 points)</em><br />
- <strong>Question 5 :</strong> Ajouter <strong>un bouton “Supprimer” avec un formulaire <code class="language-plaintext highlighter-rouge">DELETE</code></strong> pour supprimer un article. <em>(2 points)</em><br />
- <strong>Question 6 :</strong> Implémenter la méthode <code class="language-plaintext highlighter-rouge">destroy($id)</code> dans <code class="language-plaintext highlighter-rouge">ArticleController</code> pour gérer la suppression d’un article. <em>(2 points)</em></p>
+<p><strong>Question 14 :</strong> Ajouter dans <code class="language-plaintext highlighter-rouge">index.blade.php</code> une colonne avec <strong>un bouton “Modifier” redirigeant vers la page d’édition</strong> de l’article. <em>(2 points)</em><br />
+ <strong>Question 15 :</strong> Ajouter <strong>un bouton “Supprimer” avec un formulaire <code class="language-plaintext highlighter-rouge">DELETE</code></strong> pour supprimer un article. <em>(2 points)</em><br />
+ <strong>Question 16 :</strong> Implémenter la méthode <code class="language-plaintext highlighter-rouge">destroy($id)</code> dans <code class="language-plaintext highlighter-rouge">ArticleController</code> pour gérer la suppression d’un article. <em>(2 points)</em></p>
 
 <h3 id="amélioration-de-laffichage-avec-du-css-6-points"><strong>Amélioration de l’affichage avec du CSS (6 points)</strong></h3>
-<p><strong>Question 7 :</strong> Modifier <code class="language-plaintext highlighter-rouge">index.blade.php</code> pour afficher les articles sous forme de <strong>tableau stylisé</strong> en ajoutant un fichier CSS. <em>(2 points)</em><br />
- <strong>Question 8 :</strong> Améliorer le <strong>formulaire d’édition</strong> pour qu’il soit plus clair et agréable visuellement. <em>(2 points)</em><br />
- <strong>Question 9 :</strong> Vérifier que les boutons sont bien alignés et que l’affichage est <strong>responsive</strong>. <em>(2 points)</em></p>
+<p><strong>Question 17 :</strong> Modifier <code class="language-plaintext highlighter-rouge">index.blade.php</code> pour afficher les articles sous forme de <strong>tableau stylisé</strong> en ajoutant un fichier CSS. <em>(2 points)</em><br />
+ <strong>Question 18 :</strong> Améliorer le <strong>formulaire d’édition</strong> pour qu’il soit plus clair et agréable visuellement. <em>(2 points)</em><br />
+ <strong>Question 19 :</strong> Vérifier que les boutons sont bien alignés et que l’affichage est <strong>responsive</strong>. <em>(2 points)</em></p>
 
 <h2 id="remarque"><strong>Remarque</strong></h2>
 <ul>

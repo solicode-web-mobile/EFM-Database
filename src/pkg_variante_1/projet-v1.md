@@ -61,7 +61,7 @@ L’examen est divisé en **deux parties** :
 # **Partie 1 : Live Coding (30 min - 20 points)**  
 
 ## **Barème & Questions (20 points)**
-### ** Création de la classe `ArticleService` (6 points)**
+### **Création de la classe `ArticleService` (6 points)**
 - **Question 1 :** Crée une classe `ArticleService` dans `app/Services/` et ajoute une méthode `getArticlesWithRelations()` qui retourne la liste des articles avec leurs relations (`user`, `comments`, `categories`). *(2 points)*  
 
 - **Question 2 :** Ajoute une méthode `incrementArticleViews(Article $article)` qui **incrémente le nombre de vues** de l’article et sauvegarde la modification. *(2 points)*  
@@ -103,24 +103,24 @@ L’examen est divisé en **deux parties** :
 
 ## **Barème & Questions (20 points)**
 ### ** Modification des catégories d’un article (Many-to-Many) (8 points)**
- **Question 1 :** Ajouter une méthode `updateArticleCategories(Article $article, array $categoryIds)` dans `ArticleService` pour **modifier les catégories associées à un article**. *(3 points)*  
- **Question 2 :** Créer une méthode `edit($id)` dans `ArticleController` qui retourne un formulaire d’édition avec la liste des catégories disponibles et celles déjà attachées à l’article. *(2 points)*  
- **Question 3 :** Implémenter une méthode `update(Request $request, $id)` dans `ArticleController` qui met à jour les catégories d’un article en utilisant `ArticleService`. *(2 points)*  
- **Question 4 :** Implémenter une méthode `show($id)` dans `ArticleController`. *(1 points)* 
+ **Question 10 :** Ajouter une méthode `updateArticleCategories(Article $article, array $categoryIds)` dans `ArticleService` pour **modifier les catégories associées à un article**. *(3 points)*  
+ **Question 11 :** Créer une méthode `edit($id)` dans `ArticleController` qui retourne un formulaire d’édition avec la liste des catégories disponibles et celles déjà attachées à l’article. *(2 points)*  
+ **Question 12 :** Implémenter une méthode `update(Request $request, $id)` dans `ArticleController` qui met à jour les catégories d’un article en utilisant `ArticleService`. *(2 points)*  
+ **Question 13 :** Implémenter une méthode `show($id)` dans `ArticleController`. *(1 points)* 
 
 
 
 ### **Ajout des boutons "Modifier" et "Supprimer" (6 points)**
- **Question 4 :** Ajouter dans `index.blade.php` une colonne avec **un bouton "Modifier" redirigeant vers la page d'édition** de l'article. *(2 points)*  
- **Question 5 :** Ajouter **un bouton "Supprimer" avec un formulaire `DELETE`** pour supprimer un article. *(2 points)*  
- **Question 6 :** Implémenter la méthode `destroy($id)` dans `ArticleController` pour gérer la suppression d’un article. *(2 points)*  
+ **Question 14 :** Ajouter dans `index.blade.php` une colonne avec **un bouton "Modifier" redirigeant vers la page d'édition** de l'article. *(2 points)*  
+ **Question 15 :** Ajouter **un bouton "Supprimer" avec un formulaire `DELETE`** pour supprimer un article. *(2 points)*  
+ **Question 16 :** Implémenter la méthode `destroy($id)` dans `ArticleController` pour gérer la suppression d’un article. *(2 points)*  
 
 
 
 ### **Amélioration de l’affichage avec du CSS (6 points)**
- **Question 7 :** Modifier `index.blade.php` pour afficher les articles sous forme de **tableau stylisé** en ajoutant un fichier CSS. *(2 points)*  
- **Question 8 :** Améliorer le **formulaire d’édition** pour qu’il soit plus clair et agréable visuellement. *(2 points)*  
- **Question 9 :** Vérifier que les boutons sont bien alignés et que l'affichage est **responsive**. *(2 points)*  
+ **Question 17 :** Modifier `index.blade.php` pour afficher les articles sous forme de **tableau stylisé** en ajoutant un fichier CSS. *(2 points)*  
+ **Question 18 :** Améliorer le **formulaire d’édition** pour qu’il soit plus clair et agréable visuellement. *(2 points)*  
+ **Question 19 :** Vérifier que les boutons sont bien alignés et que l'affichage est **responsive**. *(2 points)*  
 
 
 
