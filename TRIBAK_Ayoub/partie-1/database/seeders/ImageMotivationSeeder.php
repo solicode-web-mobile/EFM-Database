@@ -16,22 +16,22 @@ class ImageMotivationSeeder extends Seeder
         $images = [
             [
                 'employe_id' => 1, 
-                'url' => 'https://example.com/images/john_image.jpg',
+                'url' => 'https://images.pexels.com/photos/30368552/pexels-photo-30368552.jpeg',
                 'views' => 0,
             ],
             [
                 'employe_id' => 2, 
-                'url' => 'https://example.com/images/jane_image.jpg',
+                'url' => 'https://images.pexels.com/photos/30368552/pexels-photo-30368552.jpeg',
                 'views' => 0,
             ],
             [
                 'employe_id' => 3,
-                'url' => 'https://example.com/images/robert_image.jpg',
+                'url' => 'https://images.pexels.com/photos/30368552/pexels-photo-30368552.jpeg',
                 'views' => 0,
             ],
             [
                 'employe_id' => 4, 
-                'url' => 'https://example.com/images/charlie_image.jpg',
+                'url' => 'https://images.pexels.com/photos/30368552/pexels-photo-30368552.jpeg',
                 'views' => 0,
             ],
         ];
