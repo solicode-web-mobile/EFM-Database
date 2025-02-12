@@ -34,13 +34,27 @@
                 @endforeach
               </td>
               <td>
-                <button type="button" class="btn btn-secondary">View</button>
+                <a href="{{ route('articles.show', $article->id) }}" class="btn btn-secondary">
+                  View
+              </a>
+              
+              <a href="{{ route('articles.edit', $article->id) }}" class="btn btn-success">
+                  Modifier
+              </a>
+              
+              <form action="{{ route('articles.destroy', $article->id) }}" method="POST" style="display:inline;">
+                  @csrf
+                  @method('DELETE')
+                  <button type="submit" class="btn btn-danger" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet article ?');">
+                      Supprimer
+                  </button>
+              </form>
               </td>
             </tr>
             @endforeach
         </tbody>
       </table>
-      <select class="form-control choices-multiple" multiple>
+      {{-- <select class="form-control choices-multiple" multiple>
         <option></option>
         <option value="AZ">Arizona</option>
         <option value="CO">Colorado</option>
@@ -51,7 +65,7 @@
         <option value="ND">North Dakota</option>
         <option value="UT">Utah</option>
         <option value="WY">Wyoming</option>
-      </select>
+      </select> --}}
 </body>
 <script>
 </script>

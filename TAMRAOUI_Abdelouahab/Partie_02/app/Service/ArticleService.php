@@ -4,6 +4,7 @@ namespace App\Service;
 
 use App\Models\Article;
 use App\Models\Category;
+use Illuminate\Support\Facades\Request;
 
 class ArticleService {
 
@@ -18,10 +19,15 @@ class ArticleService {
                 $populaire->name = 'Populaire';
                 $categories->push($populaire);
                 $article->setRelation('categories',$categories);
-                // $article->populaire = true;
             }
         }
         return $articles;
+    }
+
+    public function updateArticleCategories(Article $article, array $categoryIds)
+    {
+
+        $article->categories()->sync($categoryIds);
     }
     private function incrementArticleViews(Article $article)
     {
@@ -31,6 +37,7 @@ class ArticleService {
     {
         $article->comments()->increment('view-counter');
     }
+
 
 }
 
