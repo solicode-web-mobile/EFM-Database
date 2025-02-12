@@ -5,14 +5,36 @@ package: pkg_variante_5
 order: 5
 ---
 
-# **📌 Examen Final - Gestion des Recettes de Cuisine avec Laravel (Note sur 40 points)**
-📌 **Durée : 1h15 (75 minutes)**  
-📌 **Barème total : 40 points**  
-📌 **Objectif :** Tester la capacité à **gérer les relations en Laravel, modifier des objets liés via un Service, structurer proprement le code et améliorer l’interface utilisateur**.  
+<table class="word-style">
+        <tbody>
+            <tr>
+              <td>
+                    <img src="{{ site.baseurl }}/assets/images/logo.png"  alt="Logo">
+                </td>
+                <td colspan="2" class="header">
+                    <p>Office de la Formation Professionnelle et de la Promotion du Travail</p>
+                    <p>Direction Régionale Nord Ouest II</p>
+                </td>
+            </tr>
+            <tr>
+               <td class="bold">Solicode</td>
+               <td class="bold">Examen de Fin de Module</td>
+               <td class="bold">Date EFM : 12/02/2025</td>
+            </tr>
+            <tr>
+                <td class="bold">Filière : DMB</td>
+                <td class="highlight">Base de données</td>
+                <td class="bold">Durée : 1 h 30 min</td>
+            </tr>
+            <tr>
+               <td class="bold">Groupe : 101</td>
+               <td class>Variante 5</td>
+               <td class="bold">Année de formation : 2024/2025</td>
+            </tr>
+        </tbody>
+</table>
 
----
-
-## **🔹 Contexte Général**  
+## **Contexte Général**  
 Tu travailles sur une **application Laravel** permettant aux utilisateurs de partager **une seule recette de cuisine**.  
 Les autres utilisateurs peuvent ensuite **donner leur avis et des suggestions d'amélioration** sur la recette.  
 
@@ -30,7 +52,7 @@ L’examen est divisé en **deux parties** :
    - Incrémentation du nombre de vues d’une recette et de ses avis via un Service.  
    - Ajout automatique d’une suggestion "Plat Favori" si une recette reçoit plus de 10 avis positifs.  
 
-2. **🟢 Partie 2 : Mini-Projet (45 minutes, 20 points)**  
+2. **Partie 2 : Mini-Projet (45 minutes, 20 points)**  
    - Ajout d’un formulaire permettant de modifier les suggestions associées à un avis.  
    - Ajout des boutons "Modifier" et "Supprimer" pour chaque avis.  
    - Amélioration du design de la page avec du CSS.  
@@ -43,7 +65,7 @@ L’examen est divisé en **deux parties** :
 - Gérer le nombre de vues des recettes et des avis.  
 - Modifier dynamiquement les suggestions d’amélioration d’un avis (*Many-to-Many*).  
 
-## **🔹 Barème & Questions (20 points)**
+## **Barème & Questions (20 points)**
 ### **1️⃣ Création de la classe `RecetteService` (6 points)**
 📌 **Question 1 :** Crée une classe `RecetteService` dans `app/Services/` et ajoute une méthode `getRecettesWithAvis()` qui retourne la liste des recettes avec leurs relations (`utilisateur`, `avis`, `suggestions`). *(2 points)*  
 📌 **Question 2 :** Ajoute une méthode `incrementRecetteViews(Recette $recette)` qui **incrémente le nombre de vues** de la recette et sauvegarde la modification. *(2 points)*  
@@ -81,13 +103,13 @@ L’examen est divisé en **deux parties** :
 
 ---
 
-# **🟢 Partie 2 : Mini-Projet (45 min - 20 points)**  
+# **Partie 2 : Mini-Projet (45 min - 20 points)**  
 📌 **Objectif :**  
 - Ajouter une fonctionnalité d’édition des suggestions associées aux avis.  
 - Permettre la suppression des avis.  
 - Améliorer le design et la responsivité de l’interface.  
 
-## **🔹 Barème & Questions (20 points)**
+## **Barème & Questions (20 points)**
 ### **1️⃣ Modification des suggestions d’un avis (8 points)**
 📌 **Question 1 :** Ajouter une méthode `updateAvisSuggestions(Avis $avis, array $suggestionsIds)` dans `RecetteService` pour **modifier les suggestions associées à un avis**. *(3 points)*  
 📌 **Question 2 :** Créer une méthode `edit($id)` dans `AvisController` qui retourne un formulaire d’édition avec la liste des suggestions disponibles. *(2 points)*  
@@ -110,7 +132,7 @@ L’examen est divisé en **deux parties** :
 
 ---
 
-## **📢 Remarque**
+## **Remarque**
 - **Total de l'examen : 40 points.**  
 - Tu peux ajouter en bonus :
   - **Une alerte de confirmation** avant la suppression d’un avis.  

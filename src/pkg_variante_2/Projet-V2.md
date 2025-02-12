@@ -5,14 +5,37 @@ package: pkg_variante_2
 order: 2
 ---
 
-# **📌 Examen Final - Gestion des Images de Motivation avec Laravel (Note sur 40 points)**  
-📌 **Durée : 1h15 (75 minutes)**  
-📌 **Barème total : 40 points**  
-📌 **Objectif :** Tester la capacité à **gérer les relations en Laravel, modifier des objets liés via un Service, structurer proprement le code et améliorer l’interface utilisateur**.  
+<table class="word-style">
+        <tbody>
+            <tr>
+              <td>
+                    <img src="{{ site.baseurl }}/assets/images/logo.png"  alt="Logo">
+                </td>
+                <td colspan="2" class="header">
+                    <p>Office de la Formation Professionnelle et de la Promotion du Travail</p>
+                    <p>Direction Régionale Nord Ouest II</p>
+                </td>
+            </tr>
+            <tr>
+               <td class="bold">Solicode</td>
+               <td class="bold">Examen de Fin de Module</td>
+               <td class="bold">Date EFM : 12/02/2025</td>
+            </tr>
+            <tr>
+                <td class="bold">Filière : DMB</td>
+                <td class="highlight">Base de données</td>
+                <td class="bold">Durée : 1 h 30 min</td>
+            </tr>
+            <tr>
+               <td class="bold">Groupe : 101</td>
+               <td class>Variante 2</td>
+               <td class="bold">Année de formation : 2024/2025</td>
+            </tr>
+        </tbody>
+</table>
 
----
 
-## **🔹 Contexte Général**  
+## **Contexte Général**  
 Tu travailles sur une **application Laravel** permettant aux employés de partager **une seule image** qui les motive.  
 Les autres employés peuvent ensuite **ajouter des messages de soutien** (*support de motivation*).  
 
@@ -30,7 +53,7 @@ L’examen est divisé en **deux parties** :
    - Incrémentation du nombre de vues d’une image et de ses messages via un Service.  
    - Ajout automatique du type de motivation "Encouragement" si un message reçoit plus de 5 réactions.  
 
-2. **🟢 Partie 2 : Mini-Projet (45 minutes, 20 points)**  
+2. **Partie 2 : Mini-Projet (45 minutes, 20 points)**  
    - Ajout d’un formulaire permettant de modifier les types de motivation d’un message.  
    - Ajout des boutons "Modifier" et "Supprimer" pour chaque message de soutien.  
    - Amélioration du design de la page avec du CSS.  
@@ -43,7 +66,7 @@ L’examen est divisé en **deux parties** :
 - Gérer le nombre de vues des images et des messages.  
 - Modifier dynamiquement les types de motivation d’un message (*Many-to-Many*).  
 
-## **🔹 Barème & Questions (20 points)**
+## **Barème & Questions (20 points)**
 ### **1️⃣ Création de la classe `ImageService` (6 points)**
 📌 **Question 1 :** Crée une classe `ImageService` dans `app/Services/` et ajoute une méthode `getImagesWithSupport()` qui retourne la liste des images avec leurs relations (`employe`, `supportMotivation`, `typeMotivation`). *(2 points)*  
 📌 **Question 2 :** Ajoute une méthode `incrementImageViews(Image $image)` qui **incrémente le nombre de vues** de l’image et sauvegarde la modification. *(2 points)*  
@@ -81,13 +104,13 @@ L’examen est divisé en **deux parties** :
 
 ---
 
-# **🟢 Partie 2 : Mini-Projet (45 min - 20 points)**  
+# **Partie 2 : Mini-Projet (45 min - 20 points)**  
 📌 **Objectif :**  
 - Ajouter une fonctionnalité d’édition des types de motivation associés aux messages de soutien.  
 - Permettre la suppression des messages de soutien.  
 - Améliorer le design et la responsivité de l’interface.  
 
-## **🔹 Barème & Questions (20 points)**
+## **Barème & Questions (20 points)**
 ### **1️⃣ Modification des types de motivation d’un message (8 points)**
 📌 **Question 1 :** Ajouter une méthode `updateSupportMotivation(SupportMotivation $support, array $typeMotivationIds)` dans `ImageService` pour **modifier les types de motivation associés à un message**. *(3 points)*  
 📌 **Question 2 :** Créer une méthode `edit($id)` dans `SupportMotivationController` qui retourne un formulaire d’édition avec la liste des types de motivation disponibles. *(2 points)*  
@@ -111,7 +134,7 @@ L’examen est divisé en **deux parties** :
 
 ---
 
-## **📢 Remarque**
+## **Remarque**
 - **Total de l'examen : 40 points.**  
 - Tu peux ajouter en bonus :
   - **Une alerte de confirmation** avant la suppression d’un message.  

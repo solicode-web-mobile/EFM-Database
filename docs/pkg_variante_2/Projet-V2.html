@@ -33,14 +33,36 @@
         </div>
        
         <div class="page">
-            <h1 id="-examen-final---gestion-des-images-de-motivation-avec-laravel-note-sur-40-points"><strong>📌 Examen Final - Gestion des Images de Motivation avec Laravel (Note sur 40 points)</strong></h1>
-<p>📌 <strong>Durée : 1h15 (75 minutes)</strong><br />
-📌 <strong>Barème total : 40 points</strong><br />
-📌 <strong>Objectif :</strong> Tester la capacité à <strong>gérer les relations en Laravel, modifier des objets liés via un Service, structurer proprement le code et améliorer l’interface utilisateur</strong>.</p>
+            <table class="word-style">
+        <tbody>
+            <tr>
+              <td>
+                    <img src="/EFM-Database/assets/images/logo.png" alt="Logo" />
+                </td>
+                <td colspan="2" class="header">
+                    <p>Office de la Formation Professionnelle et de la Promotion du Travail</p>
+                    <p>Direction Régionale Nord Ouest II</p>
+                </td>
+            </tr>
+            <tr>
+               <td class="bold">Solicode</td>
+               <td class="bold">Examen de Fin de Module</td>
+               <td class="bold">Date EFM : 12/02/2025</td>
+            </tr>
+            <tr>
+                <td class="bold">Filière : DMB</td>
+                <td class="highlight">Base de données</td>
+                <td class="bold">Durée : 1 h 30 min</td>
+            </tr>
+            <tr>
+               <td class="bold">Groupe : 101</td>
+               <td class="">Variante 2</td>
+               <td class="bold">Année de formation : 2024/2025</td>
+            </tr>
+        </tbody>
+</table>
 
-<hr />
-
-<h2 id="-contexte-général"><strong>🔹 Contexte Général</strong></h2>
+<h2 id="contexte-général"><strong>Contexte Général</strong></h2>
 <p>Tu travailles sur une <strong>application Laravel</strong> permettant aux employés de partager <strong>une seule image</strong> qui les motive.<br />
 Les autres employés peuvent ensuite <strong>ajouter des messages de soutien</strong> (<em>support de motivation</em>).</p>
 
@@ -63,7 +85,7 @@ Les autres employés peuvent ensuite <strong>ajouter des messages de soutien</st
       <li>Ajout automatique du type de motivation “Encouragement” si un message reçoit plus de 5 réactions.</li>
     </ul>
   </li>
-  <li><strong>🟢 Partie 2 : Mini-Projet (45 minutes, 20 points)</strong>
+  <li><strong>Partie 2 : Mini-Projet (45 minutes, 20 points)</strong>
     <ul>
       <li>Ajout d’un formulaire permettant de modifier les types de motivation d’un message.</li>
       <li>Ajout des boutons “Modifier” et “Supprimer” pour chaque message de soutien.</li>
@@ -82,7 +104,7 @@ Les autres employés peuvent ensuite <strong>ajouter des messages de soutien</st
   <li>Modifier dynamiquement les types de motivation d’un message (<em>Many-to-Many</em>).</li>
 </ul>
 
-<h2 id="-barème--questions-20-points"><strong>🔹 Barème &amp; Questions (20 points)</strong></h2>
+<h2 id="barème--questions-20-points"><strong>Barème &amp; Questions (20 points)</strong></h2>
 <h3 id="1️⃣-création-de-la-classe-imageservice-6-points"><strong>1️⃣ Création de la classe <code class="language-plaintext highlighter-rouge">ImageService</code> (6 points)</strong></h3>
 <p>📌 <strong>Question 1 :</strong> Crée une classe <code class="language-plaintext highlighter-rouge">ImageService</code> dans <code class="language-plaintext highlighter-rouge">app/Services/</code> et ajoute une méthode <code class="language-plaintext highlighter-rouge">getImagesWithSupport()</code> qui retourne la liste des images avec leurs relations (<code class="language-plaintext highlighter-rouge">employe</code>, <code class="language-plaintext highlighter-rouge">supportMotivation</code>, <code class="language-plaintext highlighter-rouge">typeMotivation</code>). <em>(2 points)</em><br />
 📌 <strong>Question 2 :</strong> Ajoute une méthode <code class="language-plaintext highlighter-rouge">incrementImageViews(Image $image)</code> qui <strong>incrémente le nombre de vues</strong> de l’image et sauvegarde la modification. <em>(2 points)</em><br />
@@ -126,7 +148,7 @@ Les autres employés peuvent ensuite <strong>ajouter des messages de soutien</st
 
 <hr />
 
-<h1 id="-partie-2--mini-projet-45-min---20-points"><strong>🟢 Partie 2 : Mini-Projet (45 min - 20 points)</strong></h1>
+<h1 id="partie-2--mini-projet-45-min---20-points"><strong>Partie 2 : Mini-Projet (45 min - 20 points)</strong></h1>
 <p>📌 <strong>Objectif :</strong></p>
 <ul>
   <li>Ajouter une fonctionnalité d’édition des types de motivation associés aux messages de soutien.</li>
@@ -134,7 +156,7 @@ Les autres employés peuvent ensuite <strong>ajouter des messages de soutien</st
   <li>Améliorer le design et la responsivité de l’interface.</li>
 </ul>
 
-<h2 id="-barème--questions-20-points-1"><strong>🔹 Barème &amp; Questions (20 points)</strong></h2>
+<h2 id="barème--questions-20-points-1"><strong>Barème &amp; Questions (20 points)</strong></h2>
 <h3 id="1️⃣-modification-des-types-de-motivation-dun-message-8-points"><strong>1️⃣ Modification des types de motivation d’un message (8 points)</strong></h3>
 <p>📌 <strong>Question 1 :</strong> Ajouter une méthode <code class="language-plaintext highlighter-rouge">updateSupportMotivation(SupportMotivation $support, array $typeMotivationIds)</code> dans <code class="language-plaintext highlighter-rouge">ImageService</code> pour <strong>modifier les types de motivation associés à un message</strong>. <em>(3 points)</em><br />
 📌 <strong>Question 2 :</strong> Créer une méthode <code class="language-plaintext highlighter-rouge">edit($id)</code> dans <code class="language-plaintext highlighter-rouge">SupportMotivationController</code> qui retourne un formulaire d’édition avec la liste des types de motivation disponibles. <em>(2 points)</em><br />
@@ -157,7 +179,7 @@ Les autres employés peuvent ensuite <strong>ajouter des messages de soutien</st
 
 <hr />
 
-<h2 id="-remarque"><strong>📢 Remarque</strong></h2>
+<h2 id="remarque"><strong>Remarque</strong></h2>
 <ul>
   <li><strong>Total de l’examen : 40 points.</strong></li>
   <li>Tu peux ajouter en bonus :
