@@ -85,6 +85,11 @@
                         {{ $feedback->feedbackType->title }}
                     </li>
                     @endforeach
+                    @if($avie->valid)
+                        <li class="text-sm text-gray-600 bg-gray-200 px-3 py-1 rounded-full inline-block">
+                        Valide
+                        </li>
+                    @endif
                 </ul>
             </div>
             @endforeach

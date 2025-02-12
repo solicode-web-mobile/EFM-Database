@@ -65,7 +65,7 @@ class DatabaseSeeder extends Seeder
                 'user_id' => 1,
                 'strategy_id' => 2,
                 'content' => 'Great strategy!',
-                'vu' => 2,
+                'vu' => 10,
                 'created_at' => now(),
                 'updated_at' => now()
             ],
@@ -90,6 +90,11 @@ class DatabaseSeeder extends Seeder
 
     private function feedbackSeeder()
     {
+        for($i = 0;$i<10;$i++){
+            FeedBack::insert([
+                ['avie_id' => 1, 'feedback_type_id' => 1,'created_at' => now(), 'updated_at' => now()],
+            ]);
+        }
         FeedBack::insert([
             ['avie_id' => 1, 'feedback_type_id' => 1,'created_at' => now(), 'updated_at' => now()],
             ['avie_id' => 1, 'feedback_type_id' => 2,'created_at' => now(), 'updated_at' => now()],
