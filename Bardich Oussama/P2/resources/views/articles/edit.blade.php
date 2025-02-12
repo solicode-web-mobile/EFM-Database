@@ -1,36 +1,38 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container mx-auto mt-8">
-    <h2 class="text-2xl font-semibold text-center">Edit Article</h2>
-    <form  class="mt-6">
-         
+<div class="max-w-2xl mx-auto mt-10 p-6 bg-white shadow-lg rounded-lg">
+    <h2 class="text-3xl font-semibold text-gray-800 text-center mb-6">Edit Article Categories</h2>
 
-        <div class="mb-6">
-            <label class="block text-sm font-medium text-gray-700 mb-2">Categories</label>
-            <div class="space-y-4">
-            
-                    <div class="flex items-center">
-                        <input 
-                            type="checkbox" 
-                            name="" 
-                            value=""
-                            class="h-4 w-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500"
-                         
-                        >
-                        <label class="ml-2 text-gray-700"></label>
-                    </div>
-          
-            </div>
+    <form action="{{ route('articles.update', $article->id) }}" method="POST">
+        @csrf
+        @method('PUT') <!-- Use PUT method since we are updating -->
+
+        <div class="space-y-4">
+            @foreach($categories as $category)
+                <label class="flex items-center space-x-3 p-3 bg-gray-100 rounded-lg hover:bg-gray-200 transition">
+                    <input 
+                        type="checkbox" 
+                        name="categories[]" 
+                        value="{{ $category->id }}"
+                        class="h-5 w-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                        {{ in_array($category->id, $article->categories->pluck('id')->toArray()) ? 'checked' : '' }}
+                    >
+                    <span class="text-gray-700 font-medium">{{ $category->name }}</span>
+                </label>
+            @endforeach
         </div>
-        <div class="flex justify-between">
+
+        <div class="mt-6 flex justify-between">
             <button 
                 type="submit" 
-                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                class="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg shadow-md transition"
             >
-                Update Article
+                Update Categories
             </button>
-            <a href="" class="text-gray-600 hover:text-gray-800">
+            <a href="{{ route('articles.index') }}" 
+                class="w-full sm:w-auto text-gray-700 font-medium py-2 px-6 border border-gray-300 rounded-lg hover:bg-gray-100 transition text-center"
+            >
                 Cancel
             </a>
         </div>

@@ -44,10 +44,8 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }  
+    public function aricle(){
+        return $this->hasOne(Article::class);
     }
-
-   
-
-   
-   
 }
