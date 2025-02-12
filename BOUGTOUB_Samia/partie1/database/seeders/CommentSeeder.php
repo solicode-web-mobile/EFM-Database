@@ -16,10 +16,12 @@ class CommentSeeder extends Seeder
             [
                 'content' => 'Comment 1',
                 'article_id' => 1,
+                'views' => 10,
             ],
             [
                 'content' => 'Comment 2',
                 'article_id' => 1,
+                'views' => 8,
             ],
             [
                 'content' => 'Comment 3',
@@ -28,6 +30,7 @@ class CommentSeeder extends Seeder
             [
                 'content' => 'Comment 4',
                 'article_id' => 2,
+                'views' => 6,
             ],
             [
                 'content' => 'Comment 5',
