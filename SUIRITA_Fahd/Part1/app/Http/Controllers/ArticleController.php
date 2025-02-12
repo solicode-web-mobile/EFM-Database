@@ -4,15 +4,35 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use Illuminate\Http\Request;
+use App\Services\ArticleService;
 
 class ArticleController extends Controller
 {
+    protected ArticleService $articleService;
+
+    public function __construct(ArticleService $articleService)
+    {
+        return $this->articleService = $articleService;
+    }
+
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        $articles = $this->articleService->getArticlesWithRelations();
+
+        foreach ($articles as $article) {
+            $categories = $article->categories;
+
+            if ($article->views > 10 && !$categories->contains('name', 'Popular')) {
+                $categories->push((object) ['name' => 'Popular']);
+            }
+
+            $article->setRelation('categories', $categories);
+        }
+
+        return view('articles.index', compact('articles'));
     }
 
     /**
