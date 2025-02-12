@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('comments', function (Blueprint $table) {
             $table->id();
             $table->string('content');
-            $table->integer('view-counter')->default(0);
+            $table->integer('views')->default(0);
             $table->foreignId('article_id')->constrained('articles')->onDelete('cascade');
             $table->timestamps();
         });
