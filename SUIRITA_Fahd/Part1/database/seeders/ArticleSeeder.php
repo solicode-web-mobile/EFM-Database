@@ -16,10 +16,12 @@ class ArticleSeeder extends Seeder
             [
                 'title' => 'Article 1',
                 'user_id' => 1,
+                'views' => 11,
             ],
             [
                 'title' => 'Article 2',
                 'user_id' => 2,
+                'views' => 9,
             ],
             [
                 'title' => 'Article 3',
