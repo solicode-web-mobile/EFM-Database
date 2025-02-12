@@ -61,7 +61,7 @@ L’examen est divisé en **deux parties** :
 # **Partie 1 : Live Coding (30 min - 20 points)**  
 
 ## **Barème & Questions (20 points)**
-### ** Création de la classe `ArticleService` (6 points)**
+### **Création de la classe `ArticleService` (6 points)**
 - **Question 1 :** Crée une classe `ArticleService` dans `app/Services/` et ajoute une méthode `getArticlesWithRelations()` qui retourne la liste des articles avec leurs relations (`user`, `comments`, `categories`). *(2 points)*  
 
 - **Question 2 :** Ajoute une méthode `incrementArticleViews(Article $article)` qui **incrémente le nombre de vues** de l’article et sauvegarde la modification. *(2 points)*  

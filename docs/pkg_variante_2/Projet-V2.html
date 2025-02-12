@@ -78,7 +78,7 @@ Les autres employés peuvent ensuite <strong>ajouter des messages de soutien</st
 <p>L’examen est divisé en <strong>deux parties</strong> :</p>
 
 <ol>
-  <li><strong>🔴 Partie 1 : Live Coding (30 minutes, 20 points)</strong>
+  <li><strong>Partie 1 : Live Coding (30 minutes, 20 points)</strong>
     <ul>
       <li>Affichage des images de motivation avec leurs messages de soutien.</li>
       <li>Incrémentation du nombre de vues d’une image et de ses messages via un Service.</li>
@@ -96,8 +96,8 @@ Les autres employés peuvent ensuite <strong>ajouter des messages de soutien</st
 
 <hr />
 
-<h1 id="-partie-1--live-coding-30-min---20-points"><strong>🔴 Partie 1 : Live Coding (30 min - 20 points)</strong></h1>
-<p>📌 <strong>Objectif :</strong></p>
+<h1 id="partie-1--live-coding-30-min---20-points"><strong>Partie 1 : Live Coding (30 min - 20 points)</strong></h1>
+<p><strong>Objectif :</strong></p>
 <ul>
   <li>Afficher la liste des images de motivation avec leurs messages de soutien.</li>
   <li>Gérer le nombre de vues des images et des messages.</li>
@@ -105,16 +105,16 @@ Les autres employés peuvent ensuite <strong>ajouter des messages de soutien</st
 </ul>
 
 <h2 id="barème--questions-20-points"><strong>Barème &amp; Questions (20 points)</strong></h2>
-<h3 id="1️⃣-création-de-la-classe-imageservice-6-points"><strong>1️⃣ Création de la classe <code class="language-plaintext highlighter-rouge">ImageService</code> (6 points)</strong></h3>
-<p>📌 <strong>Question 1 :</strong> Crée une classe <code class="language-plaintext highlighter-rouge">ImageService</code> dans <code class="language-plaintext highlighter-rouge">app/Services/</code> et ajoute une méthode <code class="language-plaintext highlighter-rouge">getImagesWithSupport()</code> qui retourne la liste des images avec leurs relations (<code class="language-plaintext highlighter-rouge">employe</code>, <code class="language-plaintext highlighter-rouge">supportMotivation</code>, <code class="language-plaintext highlighter-rouge">typeMotivation</code>). <em>(2 points)</em><br />
-📌 <strong>Question 2 :</strong> Ajoute une méthode <code class="language-plaintext highlighter-rouge">incrementImageViews(Image $image)</code> qui <strong>incrémente le nombre de vues</strong> de l’image et sauvegarde la modification. <em>(2 points)</em><br />
-📌 <strong>Question 3 :</strong> Ajoute une méthode <code class="language-plaintext highlighter-rouge">incrementSupportViews(Image $image)</code> qui <strong>incrémente le nombre de vues de chaque message de soutien lié à cette image</strong> et sauvegarde les modifications. <em>(2 points)</em></p>
+<h3 id="création-de-la-classe-imageservice-6-points"><strong>Création de la classe <code class="language-plaintext highlighter-rouge">ImageService</code> (6 points)</strong></h3>
+<p><strong>Question 1 :</strong> Crée une classe <code class="language-plaintext highlighter-rouge">ImageService</code> dans <code class="language-plaintext highlighter-rouge">app/Services/</code> et ajoute une méthode <code class="language-plaintext highlighter-rouge">getImagesWithSupport()</code> qui retourne la liste des images avec leurs relations (<code class="language-plaintext highlighter-rouge">employe</code>, <code class="language-plaintext highlighter-rouge">supportMotivation</code>, <code class="language-plaintext highlighter-rouge">typeMotivation</code>). <em>(2 points)</em><br />
+ <strong>Question 2 :</strong> Ajoute une méthode <code class="language-plaintext highlighter-rouge">incrementImageViews(Image $image)</code> qui <strong>incrémente le nombre de vues</strong> de l’image et sauvegarde la modification. <em>(2 points)</em><br />
+ <strong>Question 3 :</strong> Ajoute une méthode <code class="language-plaintext highlighter-rouge">incrementSupportViews(Image $image)</code> qui <strong>incrémente le nombre de vues de chaque message de soutien lié à cette image</strong> et sauvegarde les modifications. <em>(2 points)</em></p>
 
 <hr />
 
-<h3 id="2️⃣-implémentation-du-imagecontroller-6-points"><strong>2️⃣ Implémentation du <code class="language-plaintext highlighter-rouge">ImageController</code> (6 points)</strong></h3>
-<p>📌 <strong>Question 4 :</strong> Crée un contrôleur <code class="language-plaintext highlighter-rouge">ImageController</code> et injecte <code class="language-plaintext highlighter-rouge">ImageService</code> dans son constructeur via l’Injection de Dépendance. <em>(2 points)</em><br />
-📌 <strong>Question 5 :</strong> Implémente une méthode <code class="language-plaintext highlighter-rouge">index()</code> qui :</p>
+<h3 id="implémentation-du-imagecontroller-6-points"><strong>Implémentation du <code class="language-plaintext highlighter-rouge">ImageController</code> (6 points)</strong></h3>
+<p><strong>Question 4 :</strong> Crée un contrôleur <code class="language-plaintext highlighter-rouge">ImageController</code> et injecte <code class="language-plaintext highlighter-rouge">ImageService</code> dans son constructeur via l’Injection de Dépendance. <em>(2 points)</em><br />
+ <strong>Question 5 :</strong> Implémente une méthode <code class="language-plaintext highlighter-rouge">index()</code> qui :</p>
 <ul>
   <li>Récupère la liste des images via <code class="language-plaintext highlighter-rouge">ImageService</code>.</li>
   <li>Vérifie si un message de soutien doit recevoir automatiquement le type de motivation “Encouragement” lorsqu’il dépasse <strong>5 réactions</strong>.</li>
@@ -123,8 +123,8 @@ Les autres employés peuvent ensuite <strong>ajouter des messages de soutien</st
 
 <hr />
 
-<h3 id="3️⃣-création-de-la-vue-indexbladephp-6-points"><strong>3️⃣ Création de la Vue <code class="language-plaintext highlighter-rouge">index.blade.php</code> (6 points)</strong></h3>
-<p>📌 <strong>Question 6 :</strong> Crée une vue <code class="language-plaintext highlighter-rouge">resources/views/images/index.blade.php</code> qui affiche les images sous forme de tableau avec les colonnes suivantes :</p>
+<h3 id="création-de-la-vue-indexbladephp-6-points"><strong>Création de la Vue <code class="language-plaintext highlighter-rouge">index.blade.php</code> (6 points)</strong></h3>
+<p><strong>Question 6 :</strong> Crée une vue <code class="language-plaintext highlighter-rouge">resources/views/images/index.blade.php</code> qui affiche les images sous forme de tableau avec les colonnes suivantes :</p>
 <ul>
   <li><strong>Image partagée</strong>.</li>
   <li><strong>Nom de l’employé</strong> (<em>relation One-to-One</em>).</li>
@@ -133,13 +133,13 @@ Les autres employés peuvent ensuite <strong>ajouter des messages de soutien</st
   <li><strong>Liste des types de motivation associés aux messages</strong> (<em>relation Many-to-Many</em>). <em>(4 points)</em></li>
 </ul>
 
-<p>📌 <strong>Question 7 :</strong> Tester le bon fonctionnement de l’affichage et s’assurer que les vues des images et des messages sont bien incrémentées après chaque rafraîchissement de la page. <em>(2 points)</em></p>
+<p><strong>Question 7 :</strong> Tester le bon fonctionnement de l’affichage et s’assurer que les vues des images et des messages sont bien incrémentées après chaque rafraîchissement de la page. <em>(2 points)</em></p>
 
 <hr />
 
-<h3 id="4️⃣-définition-de-la-route-et-test-2-points"><strong>4️⃣ Définition de la Route et Test (2 points)</strong></h3>
-<p>📌 <strong>Question 8 :</strong> Déclare une route <code class="language-plaintext highlighter-rouge">/images</code> dans <code class="language-plaintext highlighter-rouge">routes/web.php</code> pour appeler la méthode <code class="language-plaintext highlighter-rouge">index()</code> du <code class="language-plaintext highlighter-rouge">ImageController</code>. <em>(1 point)</em><br />
-📌 <strong>Question 9 :</strong> Lancer l’application, tester l’affichage dans le navigateur et vérifier que :</p>
+<h3 id="définition-de-la-route-et-test-2-points"><strong>Définition de la Route et Test (2 points)</strong></h3>
+<p><strong>Question 8 :</strong> Déclare une route <code class="language-plaintext highlighter-rouge">/images</code> dans <code class="language-plaintext highlighter-rouge">routes/web.php</code> pour appeler la méthode <code class="language-plaintext highlighter-rouge">index()</code> du <code class="language-plaintext highlighter-rouge">ImageController</code>. <em>(1 point)</em><br />
+ <strong>Question 9 :</strong> Lancer l’application, tester l’affichage dans le navigateur et vérifier que :</p>
 <ul>
   <li>Les <strong>images et leurs messages de soutien</strong> s’affichent correctement.</li>
   <li>Les <strong>vues des images et des messages de soutien</strong> sont bien incrémentées.</li>
@@ -149,7 +149,7 @@ Les autres employés peuvent ensuite <strong>ajouter des messages de soutien</st
 <hr />
 
 <h1 id="partie-2--mini-projet-45-min---20-points"><strong>Partie 2 : Mini-Projet (45 min - 20 points)</strong></h1>
-<p>📌 <strong>Objectif :</strong></p>
+<p><strong>Objectif :</strong></p>
 <ul>
   <li>Ajouter une fonctionnalité d’édition des types de motivation associés aux messages de soutien.</li>
   <li>Permettre la suppression des messages de soutien.</li>
@@ -157,25 +157,25 @@ Les autres employés peuvent ensuite <strong>ajouter des messages de soutien</st
 </ul>
 
 <h2 id="barème--questions-20-points-1"><strong>Barème &amp; Questions (20 points)</strong></h2>
-<h3 id="1️⃣-modification-des-types-de-motivation-dun-message-8-points"><strong>1️⃣ Modification des types de motivation d’un message (8 points)</strong></h3>
-<p>📌 <strong>Question 1 :</strong> Ajouter une méthode <code class="language-plaintext highlighter-rouge">updateSupportMotivation(SupportMotivation $support, array $typeMotivationIds)</code> dans <code class="language-plaintext highlighter-rouge">ImageService</code> pour <strong>modifier les types de motivation associés à un message</strong>. <em>(3 points)</em><br />
-📌 <strong>Question 2 :</strong> Créer une méthode <code class="language-plaintext highlighter-rouge">edit($id)</code> dans <code class="language-plaintext highlighter-rouge">SupportMotivationController</code> qui retourne un formulaire d’édition avec la liste des types de motivation disponibles. <em>(2 points)</em><br />
-📌 <strong>Question 3 :</strong> Implémenter une méthode <code class="language-plaintext highlighter-rouge">update(Request $request, $id)</code> dans <code class="language-plaintext highlighter-rouge">SupportMotivationController</code> qui met à jour les types de motivation d’un message en utilisant <code class="language-plaintext highlighter-rouge">ImageService</code>. <em>(2 points)</em><br />
-📌 <strong>Question 4 :</strong> Implémenter une méthode <code class="language-plaintext highlighter-rouge">show($id)</code> dans <code class="language-plaintext highlighter-rouge">ArticleController</code>. <em>(1 points)</em></p>
+<h3 id="-modification-des-types-de-motivation-dun-message-8-points">** Modification des types de motivation d’un message (8 points)**</h3>
+<p><strong>Question 10 :</strong> Ajouter une méthode <code class="language-plaintext highlighter-rouge">updateSupportMotivation(SupportMotivation $support, array $typeMotivationIds)</code> dans <code class="language-plaintext highlighter-rouge">ImageService</code> pour <strong>modifier les types de motivation associés à un message</strong>. <em>(3 points)</em><br />
+ <strong>Question 11 :</strong> Créer une méthode <code class="language-plaintext highlighter-rouge">edit($id)</code> dans <code class="language-plaintext highlighter-rouge">SupportMotivationController</code> qui retourne un formulaire d’édition avec la liste des types de motivation disponibles. <em>(2 points)</em><br />
+ <strong>Question 12 :</strong> Implémenter une méthode <code class="language-plaintext highlighter-rouge">update(Request $request, $id)</code> dans <code class="language-plaintext highlighter-rouge">SupportMotivationController</code> qui met à jour les types de motivation d’un message en utilisant <code class="language-plaintext highlighter-rouge">ImageService</code>. <em>(2 points)</em><br />
+ <strong>Question 13 :</strong> Implémenter une méthode <code class="language-plaintext highlighter-rouge">show($id)</code> dans <code class="language-plaintext highlighter-rouge">ArticleController</code>. <em>(1 points)</em></p>
 
 <hr />
 
-<h3 id="2️⃣-ajout-des-boutons-modifier-et-supprimer-6-points"><strong>2️⃣ Ajout des boutons “Modifier” et “Supprimer” (6 points)</strong></h3>
-<p>📌 <strong>Question 4 :</strong> Ajouter dans <code class="language-plaintext highlighter-rouge">index.blade.php</code> une colonne avec <strong>un bouton “Modifier” redirigeant vers la page d’édition</strong> du message de soutien. <em>(2 points)</em><br />
-📌 <strong>Question 5 :</strong> Ajouter <strong>un bouton “Supprimer” avec un formulaire <code class="language-plaintext highlighter-rouge">DELETE</code></strong> pour supprimer un message de soutien. <em>(2 points)</em><br />
-📌 <strong>Question 6 :</strong> Implémenter la méthode <code class="language-plaintext highlighter-rouge">destroy($id)</code> dans <code class="language-plaintext highlighter-rouge">SupportMotivationController</code> pour gérer la suppression d’un message de soutien. <em>(2 points)</em></p>
+<h3 id="ajout-des-boutons-modifier-et-supprimer-6-points"><strong>Ajout des boutons “Modifier” et “Supprimer” (6 points)</strong></h3>
+<p><strong>Question 14 :</strong> Ajouter dans <code class="language-plaintext highlighter-rouge">index.blade.php</code> une colonne avec <strong>un bouton “Modifier” redirigeant vers la page d’édition</strong> du message de soutien. <em>(2 points)</em><br />
+ <strong>Question 15 :</strong> Ajouter <strong>un bouton “Supprimer” avec un formulaire <code class="language-plaintext highlighter-rouge">DELETE</code></strong> pour supprimer un message de soutien. <em>(2 points)</em><br />
+ <strong>Question 16 :</strong> Implémenter la méthode <code class="language-plaintext highlighter-rouge">destroy($id)</code> dans <code class="language-plaintext highlighter-rouge">SupportMotivationController</code> pour gérer la suppression d’un message de soutien. <em>(2 points)</em></p>
 
 <hr />
 
-<h3 id="3️⃣-amélioration-de-laffichage-avec-du-css-6-points"><strong>3️⃣ Amélioration de l’affichage avec du CSS (6 points)</strong></h3>
-<p>📌 <strong>Question 7 :</strong> Modifier <code class="language-plaintext highlighter-rouge">index.blade.php</code> pour afficher les images et les messages sous forme de <strong>tableau stylisé</strong> en ajoutant un fichier CSS. <em>(2 points)</em><br />
-📌 <strong>Question 8 :</strong> Améliorer le <strong>formulaire d’édition</strong> pour qu’il soit plus clair et agréable visuellement. <em>(2 points)</em><br />
-📌 <strong>Question 9 :</strong> Vérifier que les boutons sont bien alignés et que l’affichage est <strong>responsive</strong>. <em>(2 points)</em></p>
+<h3 id="-amélioration-de-laffichage-avec-du-css-6-points">** Amélioration de l’affichage avec du CSS (6 points)**</h3>
+<p><strong>Question 17 :</strong> Modifier <code class="language-plaintext highlighter-rouge">index.blade.php</code> pour afficher les images et les messages sous forme de <strong>tableau stylisé</strong> en ajoutant un fichier CSS. <em>(2 points)</em><br />
+ <strong>Question 18 :</strong> Améliorer le <strong>formulaire d’édition</strong> pour qu’il soit plus clair et agréable visuellement. <em>(2 points)</em><br />
+ <strong>Question 19 :</strong> Vérifier que les boutons sont bien alignés et que l’affichage est <strong>responsive</strong>. <em>(2 points)</em></p>
 
 <hr />
 
