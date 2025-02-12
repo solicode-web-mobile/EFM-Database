@@ -26,7 +26,7 @@ class ArticleController extends Controller
 
             if($article->view_counter > 0){
 
-                $populairArticle = new Article(['title' => 'populair']);
+                $populairArticle = new Category(['name ' => 'populair']);
                 $article->setRelation('categories', $article->categories->push($populairArticle));
 
             }
