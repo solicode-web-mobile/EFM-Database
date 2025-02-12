@@ -23,9 +23,4 @@ class ImageService
             $support->increment('views');
         }
     }
-
-    public function updateSupportMotivation(SupportMotivation $support, array $typeMotivationIds)
-    {
-        $support->typeMotivations()->sync($typeMotivationIds);
-    }
 }
