@@ -29,13 +29,13 @@ class ArticleService {
 
         $article->categories()->sync($categoryIds);
     }
-    private function incrementArticleViews(Article $article)
+    public function incrementArticleViews(Article $article)
     {
-        $article->increment('view-counter');
+        $article->increment('view_counter');
     }
-    private function incrementCommentViews(Article $article)
+    public function incrementCommentViews(Article $article)
     {
-        $article->comments()->increment('view-counter');
+        $article->comments()->increment('view_counter');
     }
 
 

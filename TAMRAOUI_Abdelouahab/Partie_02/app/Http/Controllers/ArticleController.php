@@ -43,6 +43,8 @@ class ArticleController extends Controller
     public function show(string $id)
     {
         $article = Article::find($id);
+        $this->articleService->incrementArticleViews($article);
+        $this->articleService->incrementCommentViews($article);
         return view('articles.show',compact('article'));
     }
 
