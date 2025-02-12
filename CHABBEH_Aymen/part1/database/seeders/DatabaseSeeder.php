@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Avie;
+use App\Models\FeedBack;
 use App\Models\FeedbackType;
 use App\Models\Strategy;
 use App\Models\User;
@@ -20,8 +21,9 @@ class DatabaseSeeder extends Seeder
         User::factory(10)->create();
 
         $this->strategySeeder();
-        $this->feedbackSeeder();
+        $this->feedbackTypeSeeder();
         $this->avieSeeder();
+        $this->feedbackSeeder();
 
 
     }
@@ -62,7 +64,6 @@ class DatabaseSeeder extends Seeder
             [
                 'user_id' => 1,
                 'strategy_id' => 2,
-                'feedback_type_id' => 1,
                 'content' => 'Great strategy!',
                 'created_at' => now(),
                 'updated_at' => now()
@@ -70,7 +71,6 @@ class DatabaseSeeder extends Seeder
             [
                 'user_id' => 3,
                 'strategy_id' => 1,
-                'feedback_type_id' => 3,
                 'content' => 'Good strategy!',
                 'created_at' => now(),
                 'updated_at' => now()
@@ -78,7 +78,6 @@ class DatabaseSeeder extends Seeder
             [
                 'user_id' => 2,
                 'strategy_id' => 1,
-                'feedback_type_id' => 2,
                 'content' => 'Needs improvement.',
                 'created_at' => now(),
                 'updated_at' => now()
@@ -87,6 +86,15 @@ class DatabaseSeeder extends Seeder
     }
 
     private function feedbackSeeder()
+    {
+        FeedBack::insert([
+            ['avie_id' => 1, 'feedback_type_id' => 1,'created_at' => now(), 'updated_at' => now()],
+            ['avie_id' => 1, 'feedback_type_id' => 2,'created_at' => now(), 'updated_at' => now()],
+            ['avie_id' => 1, 'feedback_type_id' => 3,'created_at' => now(), 'updated_at' => now()],
+        ]);
+    }
+
+    private function feedbackTypeSeeder()
     {
         FeedbackType::insert([
             ['title' => 'Positive', 'created_at' => now(), 'updated_at' => now()],
