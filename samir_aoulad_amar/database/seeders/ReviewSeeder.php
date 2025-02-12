@@ -16,13 +16,13 @@ class ReviewSeeder extends Seeder
         Review::create([
             'content' => 'Amazing experience! The hike was challenging but rewarding.',
             'views' => '200',
-            'hike_id' => 1, // Assuming hike with ID 1 exists
+            'hike_id' => 3, // Assuming hike with ID 1 exists
         ]);
 
         Review::create([
             'content' => 'It was too difficult, and I didn\'t enjoy the hike.',
             'views' => '50',
-            'hike_id' => 2, // Assuming hike with ID 2 exists
+            'hike_id' => 3, // Assuming hike with ID 2 exists
         ]);
 
         Review::create([
