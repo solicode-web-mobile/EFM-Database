@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\TypeMotivation;
 use App\Services\ImageService;
 use Illuminate\Http\Request;
 
@@ -11,7 +12,7 @@ class ImageMotivationController extends Controller
 
     public function __construct(ImageService $imageService)
     {
-        return $this->imageService = $imageService;
+        $this->imageService = $imageService;
     }
 
     public function index()
