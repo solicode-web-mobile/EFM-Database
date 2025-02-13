@@ -4,35 +4,38 @@
 <div class="container">
     <h1 class="mb-4 text-primary text-center">Hiking Proposals</h1>
 
-    @foreach ($hikes as $hike)
-        <div class="card shadow-sm mb-4">
-            <div class="card-body">
-                <h3 class="card-title text-success">{{ $hike->title }}</h3>
-                <p class="text-muted">By <strong>{{ $hike->user->name }}</strong> | <span class="badge bg-secondary">{{ $hike->views }} views</span></p>
-                <p class="card-text">{{ $hike->description }}</p>
-
-                <h5 class="mt-4 text-info">Reviews:</h5>
-                @foreach ($hike->reviews as $review)
-                    <div class="border rounded p-3 mb-3 bg-light">
-                        <p class="mb-2"><strong class="text-dark">{{ $review->user->name }}</strong>:</p>
-                        <p class="fst-italic">"{{ $review->content }}"</p>
-
-                        <!-- Display Suggestions under each Review -->
-                        @if ($review->suggestions->count() > 0)
-                            <div class="ps-4 mt-2">
-                                <h6 class="text-primary">Suggestions:</h6>
-                                @foreach ($review->suggestions as $suggestion)
-                                    <div class="border-start border-primary ps-3 py-2">
-                                        <p class="mb-1"><strong class="text-dark">{{ $suggestion->user->name }}</strong>:</p>
-                                        <p class="text-muted">{{ $suggestion->content }}</p>
-                                    </div>
-                                @endforeach
-                            </div>
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th>Title</th>
+                    <th>Created By</th>
+                    <th>Views</th>
+                    <th>Reviews</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($hikes as $index => $hike)
+                <tr>
+                    <td>{{ $hike->title }}</td>
+                    <td>{{ $hike->user->name }}</td>
+                    <td>{{ $hike->views }}</td>
+                    <td>
+                        @if (!empty($recommended[$hike->id]))
+                        <p style="color: orange; font-weight: bold; font-family: sans-serif;">{{$recommended[$hike->id]}}</p>
                         @endif
-                    </div>
+                        @foreach ($hike->reviews as $review)
+                        <p style="font-weight: bold;">{{ $review->user->name }}:</p> {{ $review->content }} <br>
+                        @endforeach
+                    </td>
+                    <td>
+                        <a type="submit" class="btn btn-sm btn-primary" href="{{ route('hikes.show', $hike->id) }}">Show more details</a>
+                    </td>
+                </tr>
                 @endforeach
-            </div>
-        </div>
-    @endforeach
+            </tbody>
+        </table>
+    </div>
 </div>
 @endsection
