@@ -15,18 +15,6 @@ class StrategyController extends Controller
     public function index()
     {
         $strategies = $this->strategyService->getStrategiesWithAvis();
-        foreach ($strategies as $strategy) {
-            $this->strategyService->incrementStrategieViews($strategy);
-            foreach($strategy->avie as $avie){
-                $isValid = 0;
-                foreach($avie->feedback as $feedback)
-                {
-                    if($feedback->feedbackType->id = 1) $isValid++;
-                    if($isValid >= 10) $avie->valid = true;
-                }
-                $this->strategyService->incrementAvieViews($avie);
-            }
-        }
         return view('welcome', compact('strategies'));
     }
 
