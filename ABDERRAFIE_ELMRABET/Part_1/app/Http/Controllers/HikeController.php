@@ -4,15 +4,35 @@ namespace App\Http\Controllers;
 
 use App\Models\hike;
 use Illuminate\Http\Request;
+use App\Services\HikeService;
 
 class HikeController extends Controller
 {
+    protected $hikeService;
+
+    public function __construct(HikeService $hikeService)
+    {
+        $this->hikeService = $hikeService;
+    }
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
         //
+        $hikes = $this->hikeService->getHikesWithReviews();
+
+        $recommended = [];
+        foreach ($hikes as $hike) {
+            if ($hike->reviews->count() >= 5){
+                $recommended[$hike->id] = "RECOMMENDED HIKE !!";
+            } else  {
+                $recommended[$hike->id] = null;
+            }
+        }
+
+        return view('home', compact('hikes'));
+
     }
 
     /**

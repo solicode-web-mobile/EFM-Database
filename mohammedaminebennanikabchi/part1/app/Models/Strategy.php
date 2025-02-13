@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Strategy extends Model
 {
-    protected $fillable = ['title', 'content', 'vu'];
+    protected $fillable = ['title','content','vue'];
 
     public function user(): BelongsTo
     {

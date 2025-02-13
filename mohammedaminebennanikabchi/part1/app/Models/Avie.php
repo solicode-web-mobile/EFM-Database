@@ -25,4 +25,5 @@ class Avie extends Model
     {
         return $this->hasMany(FeedBack::class);
     }
+   
 }
