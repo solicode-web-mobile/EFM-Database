@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Services;
 
 use App\Models\Strategy;
@@ -9,14 +10,28 @@ class StrategySrevice
 {
     public function getStrategiesWithAvis(): Collection
     {
-        return Strategy::with(
+        $strategies =  Strategy::with(
             [
                 'user',
-                'avie', 
-                'avie.user', 
+                'avie',
+                'avie.user',
                 'avie.feedback',
                 'avie.feedback.feedbackType'
-            ])->get();
+            ]
+        )->get();
+        foreach ($strategies as $strategy) {
+            $this->incrementStrategieViews($strategy);
+            foreach ($strategy->avie as $avie) {
+                $isValid = 0;
+                foreach ($avie->feedback as $feedback) {
+                    if ($feedback->feedbackType->id = 1) $isValid++;
+                    if ($isValid >= 10) $avie->valid = true;
+                }
+                $this->incrementAvieViews($avie);
+            }
+            $avie->avg = $this->isAvrg($avie);
+        }
+        return $strategies;
     }
 
     public function incrementStrategieViews(Strategy $strategy)
@@ -29,8 +44,10 @@ class StrategySrevice
         $avie->increment('vu');
     }
 
-    public function updateAvisFeedback(Avis $avis, array $feedbackIds)
+    public function isAvrg(Avie $avie)
     {
-        
+        $avg = Avie::avg('vu');
+        if ($avie->vu > $avg) return true;
+        else return false;
     }
 }

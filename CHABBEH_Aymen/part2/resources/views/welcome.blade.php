@@ -39,7 +39,7 @@
         <h3 class="mt-4 text-lg font-semibold text-gray-700">Avies:</h3>
 
         @foreach($strategy->avie as $avie)
-        <div class="bg-gray-100 p-4 mt-3 rounded-lg shadow-sm">
+        <div class="bg-gray-100 p-4 mt-3 rounded-lg shadow-sm {{ $avie->avg?'bg-red-400':''}}">
             <div class="flex items-center justify-between">
                 <div class="flex items-center space-x-3">
                     <div class="w-10 h-10 bg-blue-500 text-white flex items-center justify-center rounded-full">
@@ -62,7 +62,10 @@
                 </div>
             </div>
 
+            <div class="flex justify-between">
             <p class="text-gray-700 mt-2">{{ $avie->content }}</p>
+            <p class="text-gray-700 mt-2">{{ $avie->vu }}</p>
+            </div>
 
             <h4 class="mt-3 font-medium text-gray-700">Feedback:</h4>
             <ul class="mt-2 space-y-1">

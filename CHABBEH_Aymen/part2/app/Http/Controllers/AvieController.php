@@ -71,7 +71,7 @@ class AvieController extends Controller
             ]);
         }
 
-        return redirect()->route('index', $avie->strategy_id)->with('success', 'Avie updated successfully!');
+        return redirect()->route('index')->with('success', 'Avie updated successfully!');
     }
 
     /**
