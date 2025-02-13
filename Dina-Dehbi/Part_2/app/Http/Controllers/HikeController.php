@@ -8,18 +8,22 @@ use Illuminate\Http\Request;
 
 class HikeController extends Controller
 {
-        protected $hikeService;
+    protected $hikeService;
 
-        public function __construct(HikeService $hikeService){
-            $this->hikeService = $hikeService;
+    public function __construct(HikeService $hikeService)
+    {
+        $this->hikeService = $hikeService;
+    }
+
+    public function index()
+    {
+        $hikes = $this->hikeService->getAllHikeRelation();
+
+        foreach ($hikes as $hike) {
+            $hike->isRecommended = $this->hikeService->checkIfReviewsRecommended($hike);
+            $hike->isPopular = $this->hikeService->checkIfPopular($hike);
         }
 
-        public function index(){
-            $hikes = $this->hikeService->getAllHikeRelation();
-            foreach($hikes as $hike){
-                $hike->isRecommended = $this->hikeService->checkIfReviewsRecommended($hike);
-            }
-            return view('home', compact('hikes'));
-        }
-        
+        return view('home', compact('hikes'));
+    }
 }

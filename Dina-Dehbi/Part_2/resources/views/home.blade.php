@@ -1,4 +1,5 @@
 @extends('layouts.app')
+
 @section('content')
     <div class="container mt-5">
         @if($hikes->count())
@@ -10,6 +11,7 @@
                         <th scope="col">Description</th>
                         <th scope="col">Vues</th>
                         <th scope="col">Recommandée</th>
+                        <th scope="col">Popularité</th>
                         <th scope="col">Avis</th>
                     </tr>
                 </thead>
@@ -26,6 +28,13 @@
                                         <span class="badge badge-success">Randonnée Recommandée</span>
                                     @else
                                         <span class="badge badge-danger">Non recommandée</span>
+                                    @endif
+                                </td>
+                                <td>
+                                    @if($hike->isPopular)
+                                        <span class="badge badge-warning">Populaire</span>
+                                    @else
+                                        <span class="badge badge-secondary">Pas encore populaire</span>
                                     @endif
                                 </td>
                                 <td>
@@ -49,6 +58,15 @@
                     @endforeach
                 </tbody>
             </table>
+
+            @foreach ($hikes as $hike)
+                @if ($hike->isPopular)
+                    <div class="alert alert-info mt-3">
+                        <strong>Ce hike est populaire!</strong> Il a plus de vues que la moyenne.
+                    </div>
+                @endif
+            @endforeach
+
         @else
             <p class="text-center">Aucune randonnée disponible.</p>
         @endif

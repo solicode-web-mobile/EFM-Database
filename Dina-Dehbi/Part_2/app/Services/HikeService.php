@@ -4,38 +4,49 @@ namespace App\Services;
 
 use App\Models\Hike;
 use App\Models\Review;
-use App\Models\Suggestion;
 
 class HikeService
 {
-    public function getAllHikeRelation() {
-        return Hike::with(['reviews.suggestions', 'reviews.user'])->get();
+    public function getAllHikeRelation()
+    {
+        return Hike::with(['reviews.suggestions', 'reviews.user', 'user'])->get();
     }
-    public function viewHikeIncrement(Hike $hike){
-        $hike->increment('views'); 
+
+    public function incrementHikeViews(Hike $hike)
+    {
+        $hike->increment('views');
     }
-    public function viewReviewsIncrement(Hike $hike){
-        foreach($hike->reviews as $review){
+
+    public function incrementReviewViews(Hike $hike)
+    {
+        foreach ($hike->reviews as $review) {
             $review->increment('views');
         }
     }
-    public function checkIfReviewsRecommended(Hike $hike){
-        $reviewsCount = $hike->reviews->count();
-        return $reviewsCount > 10;
+
+    public function checkIfReviewsRecommended(Hike $hike)
+    {
+        return $hike->reviews->count() > 10;
     }
-    
+
     public function updateReviewSuggestions(Review $review, array $suggestionsIds)
     {
-        $review->suggestions()->delete();
-            foreach ($suggestionsIds as $content) {
-            $review->suggestions()->create([
-                'content' => $content
-            ]);
-        }
+        $review->suggestions()->sync($suggestionsIds);
     }
 
-   
+    public function checkIfPopular(Hike $hike)
+    {
+        $averageViews = Hike::avg('views');
+        return $hike->views > $averageViews; 
+    }
 
-
-   
+    public function getHikesWithPopularity()
+    {
+        $hikes = $this->getAllHikeRelation();
+        foreach ($hikes as $hike) {
+            $hike->isPopular = $this->checkIfPopular($hike); 
+            $hike->isRecommended = $this->checkIfReviewsRecommended($hike);  
+        }
+        return $hikes;
+    }
 }
