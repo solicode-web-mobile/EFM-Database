@@ -24,4 +24,8 @@ class FeedBack extends Model
     {
         return $this->belongsTo(FeedbackType::class);
     }
+
+
+
+    
 }

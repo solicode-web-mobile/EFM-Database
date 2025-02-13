@@ -40,7 +40,7 @@ class DatabaseSeeder extends Seeder
                 'updated_at' => now()
             ],
             [
-                'user_id' => 1,
+                'user_id' => 2,
                 'title' => 'Strategy Two for One',
                 'content' => 'Content of strategy Two.',
                 'vu' => 10,
@@ -48,7 +48,7 @@ class DatabaseSeeder extends Seeder
                 'updated_at' => now()
             ],
             [
-                'user_id' => 2,
+                'user_id' => 3,
                 'title' => 'Strategy Two',
                 'content' => 'Content of strategy two.',
                 'vu' => 20,
@@ -65,6 +65,7 @@ class DatabaseSeeder extends Seeder
                 'user_id' => 1,
                 'strategy_id' => 2,
                 'content' => 'Great strategy!',
+                'vu' => 10,
                 'created_at' => now(),
                 'updated_at' => now()
             ],
@@ -72,6 +73,7 @@ class DatabaseSeeder extends Seeder
                 'user_id' => 3,
                 'strategy_id' => 1,
                 'content' => 'Good strategy!',
+                'vu' => 5,
                 'created_at' => now(),
                 'updated_at' => now()
             ],
@@ -79,6 +81,7 @@ class DatabaseSeeder extends Seeder
                 'user_id' => 2,
                 'strategy_id' => 1,
                 'content' => 'Needs improvement.',
+                'vu' => 20,
                 'created_at' => now(),
                 'updated_at' => now()
             ]
@@ -87,6 +90,11 @@ class DatabaseSeeder extends Seeder
 
     private function feedbackSeeder()
     {
+        for($i = 0;$i<10;$i++){
+            FeedBack::insert([
+                ['avie_id' => 1, 'feedback_type_id' => 1,'created_at' => now(), 'updated_at' => now()],
+            ]);
+        }
         FeedBack::insert([
             ['avie_id' => 1, 'feedback_type_id' => 1,'created_at' => now(), 'updated_at' => now()],
             ['avie_id' => 1, 'feedback_type_id' => 2,'created_at' => now(), 'updated_at' => now()],
