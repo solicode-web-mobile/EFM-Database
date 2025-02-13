@@ -27,6 +27,11 @@
             </thead>
             <tbody>
                 @foreach ($articles as $article)
+                @if ($article->categories->contains('name', 'MoreThanAverage'))
+                 <tr class="border-b bg-red-700">
+                @else
+                 <tr class="border-b">
+                @endif
                     <tr class="border-b hover:bg-gray-100 transition">
                         <td class="px-6 py-4 text-gray-800">{{ $article->title }}</td>
                         <td class="px-6 py-4 text-gray-800">{{ $article->user->name }}</td>

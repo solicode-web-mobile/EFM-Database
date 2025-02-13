@@ -22,16 +22,8 @@ class ArticleController extends Controller
     public function index()
     {
         $articles = $this->articleService->getArticlesWithRelations();
-
-        foreach ($articles as $article) {
-            $categories = $article->categories;
-
-            if ($article->views > 10 && !$categories->contains('name', 'Popular')) {
-                $categories->push((object) ['name' => 'Popular']);
-            }
-
-            $article->setRelation('categories', $categories);
-        }
+        $articles = $this->articleService->addPopularArticles($articles);
+        $articles = $this->articleService->addMoreThanAverageArticles($articles);
 
         return view('articles.index', compact('articles'));
     }
