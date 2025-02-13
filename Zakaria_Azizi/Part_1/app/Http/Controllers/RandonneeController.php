@@ -21,6 +21,11 @@ class RandonneeController extends Controller
             $this->randonneeService->incrementRandonneeViews($randonnee);
             $this->randonneeService->incrementAvisViews($randonnee);
         }
+        
+        if ($randonnee->avis->where('note', '>=', 4)->count() > 10) {
+            $randonnee->suggestion = "Randonnée Recommandée";
+            $randonnee->save();
+        }
         return view('randonnees.index', compact('randonnees'));
     }
 }
