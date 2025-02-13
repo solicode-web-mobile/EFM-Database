@@ -11,9 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('feedback', function (Blueprint $table) {
+        Schema::create('avies', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->foreignId('strategy_id')->constrained()->onDelete('cascade');
+            $table->string('content');
+            $table->integer('vu');
             $table->timestamps();
         });
     }
@@ -23,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('feedback');
+        Schema::dropIfExists('avies');
     }
 };
