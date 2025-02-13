@@ -51,6 +51,15 @@
                             </form>
                         </td>
                     </tr>
+
+                    <tr class="{{ $image->above_average ? 'bg-red-500 text-white' : '' }}">
+                        <td><img src="{{ asset('storage/' . $image->path) }}" width="100"></td>
+                        <td>
+                            @foreach ($image->supportMotivation as $support)
+                                <p>{{ $support->message }} (Vues: {{ $support->views }})</p>
+                            @endforeach
+                        </td>
+                    </tr>
                 @endforeach
             @endforeach
         </tbody>
