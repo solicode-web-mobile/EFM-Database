@@ -18,7 +18,7 @@ class ArticleService
         $avgViews = $articles->avg('view_counter');
         
         foreach ($articles as $article) {
-            if ($article->view_counter > 0) {
+            if ($article->view_counter > 10) {
                 $populairCatego = new Category([
                     'name' => 'populair',
                     'color' => $article->view_counter > $avgViews ? 'red' : 'black'
