@@ -10,7 +10,31 @@ use App\Models\Suggestion;
 
 class HikeService
 {
+    // 
+    public function getReviewsColorBasedOnViews($hikes)
+    {
+        $colors = [];
 
+        foreach ($hikes as $hike) {
+            foreach ($hike->reviews as $review) {
+
+                $totalViews = $hike->reviews->sum('views');
+                $totalReviews = $hike->reviews->count();
+                $averageViews = ($totalReviews > 0) ? $totalViews / $totalReviews : 0;
+
+                if ($review->views > $averageViews) {
+                    $colors[$review->id] = 'red';
+                } else {
+                    $colors[$review->id] = '';
+                }
+            }
+        }
+
+        return $colors;
+    }
+
+
+    // 
     public function getHikesWithReviews()
     {
         return Hike::with(['user', 'reviews.suggestions'])->get();
