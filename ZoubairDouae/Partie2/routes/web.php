@@ -17,4 +17,4 @@ Route::delete('/images/{id}', SupportMotivationController::class, 'destroy')->na
 Route::get('/images/{id}/edit', SupportMotivationController::class, 'edit')->name('images.edit');
 
 
-Route::put('/support_motivation/{id}', SupportMotivationController::class, 'update')->name('images.update');
+Route::put('/images/{id}', SupportMotivationController::class, 'update')->name('images.update');

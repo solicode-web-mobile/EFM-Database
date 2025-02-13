@@ -31,7 +31,16 @@ class ImageMotivationController extends Controller
             }
         }
 
-        return view('images.index', compact('images'));
+        // return view('images.index', compact('images'));
+
+        $data = $this->imageService->getImagesWithAverageCheck();
+    
+        return view('images.index', [
+            'images' => $data['images'],
+            'averageViews' => $data['averageViews']
+        ]);
+
+ 
     }
 
     public function updateSupportMotivation(SupportMotivation $support, array $typeMotivationIds)
@@ -39,6 +48,8 @@ class ImageMotivationController extends Controller
     
     $support->typeMotivations()->sync($typeMotivationIds);
 }
+
+
 
 
     
