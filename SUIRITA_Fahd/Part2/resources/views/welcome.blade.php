@@ -84,7 +84,7 @@
                                     />
                                     <div
                                         class="absolute -bottom-16 -left-16 h-40 w-[calc(100%_+_8rem)] bg-gradient-to-b from-transparent via-white to-white dark:via-zinc-900 dark:to-zinc-900"
-                                    ></div>
+                                     ></div>
                                 </div>
 
                                 <div class="relative flex items-center gap-6 lg:items-end">
