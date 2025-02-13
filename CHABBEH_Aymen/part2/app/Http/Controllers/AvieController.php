@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Avie;
+use App\Models\FeedbackType;
 
 class AvieController extends Controller
 {
@@ -42,17 +43,35 @@ class AvieController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Avie $avie)
     {
-        //
+        $avie->load('feedback.feedbackType');
+        $feedbackTypes = FeedbackType::get();
+        return view('avie.edit', compact(['avie', 'feedbackTypes']));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Avie $avie)
     {
-        //
+        $request->validate([
+            'content' => 'required|string|max:500',
+            'feedback.*.type' => 'exists:feedback_types,id'
+        ]);
+
+        // Update Avie Content
+        $avie->update(['content' => $request->content]);
+
+        // Update Feedback
+        $avie->feedback()->delete();
+        foreach ($request->feedback as $feedback) {
+            $avie->feedback()->create([
+                'feedback_type_id' => $feedback['type']
+            ]);
+        }
+
+        return redirect()->route('index', $avie->strategy_id)->with('success', 'Avie updated successfully!');
     }
 
     /**

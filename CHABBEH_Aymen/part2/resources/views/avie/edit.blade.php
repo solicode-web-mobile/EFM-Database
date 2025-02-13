@@ -11,7 +11,7 @@
     <div class="bg-white shadow-lg rounded-2xl p-6">
         <h2 class="text-2xl font-bold text-gray-800 mb-4">Edit Avie</h2>
 
-        <form action="{{-- route('avies.update', $avie->id) --}}" method="POST">
+        <form action="{{ route('avie.update', $avie->id) }}" method="POST">
             @csrf
             @method('PUT')
 
