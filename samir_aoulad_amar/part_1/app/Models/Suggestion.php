@@ -8,5 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Suggestion extends Model
 {
     use HasFactory;
- 
+    protected $fillable = ['content','user_id','views','review_id'];
+    public function user(){
+       return $this->belongsTo(User::class);
+    }
+    public function reviews(){
+        return $this->belongsTo(Review::class);
+     }
+   
    }
