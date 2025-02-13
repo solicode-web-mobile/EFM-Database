@@ -16,7 +16,7 @@ class StrategyController extends Controller
     {
         $strategies = $this->strategyService->getStrategiesWithAvis();
         foreach ($strategies as $strategy) {
-          
+            $this->strategyService->incrementStrategieViews($strategy);
             foreach($strategy->avie as $avie){
                 $isValid = 0;
                 foreach($avie->feedback as $feedback)
@@ -24,10 +24,10 @@ class StrategyController extends Controller
                     if($feedback->feedbackType->id = 1) $isValid++;
                     if($isValid >= 10) $avie->valid = true;
                 }
-              
+                $this->strategyService->incrementAvieViews($avie);
             }
         }
-        return view('index', compact('strategies'));
+        return view('welcome', compact('strategies'));
     }
 
     /**

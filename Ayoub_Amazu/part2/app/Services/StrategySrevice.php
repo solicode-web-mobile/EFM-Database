@@ -28,4 +28,9 @@ class StrategySrevice
     {
         $avie->increment('vu');
     }
+
+    public function updateAvisFeedback(Avie $avis, array $feedbackIds)
+    {
+        
+    }
 }
