@@ -102,7 +102,7 @@ L’examen est divisé en **deux parties** :
 # **Partie 2 : Mini-Projet (45 min - 20 points)**  
 
 ## **Barème & Questions (20 points)**
-### ** Modification des catégories d’un article (Many-to-Many) (8 points)**
+### **Modification des catégories d’un article (Many-to-Many) (8 points)**
  **Question 10 :** Ajouter une méthode `updateArticleCategories(Article $article, array $categoryIds)` dans `ArticleService` pour **modifier les catégories associées à un article**. *(3 points)*  
  **Question 11 :** Créer une méthode `edit($id)` dans `ArticleController` qui retourne un formulaire d’édition avec la liste des catégories disponibles et celles déjà attachées à l’article. *(2 points)*  
  **Question 12 :** Implémenter une méthode `update(Request $request, $id)` dans `ArticleController` qui met à jour les catégories d’un article en utilisant `ArticleService`. *(2 points)*  

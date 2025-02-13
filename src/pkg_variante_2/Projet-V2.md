@@ -58,7 +58,7 @@ L’examen est divisé en **deux parties** :
    - Ajout des boutons "Modifier" et "Supprimer" pour chaque message de soutien.  
    - Amélioration du design de la page avec du CSS.  
 
----
+
 
 # **Partie 1 : Live Coding (30 min - 20 points)**  
  **Objectif :**  
@@ -72,7 +72,7 @@ L’examen est divisé en **deux parties** :
  **Question 2 :** Ajoute une méthode `incrementImageViews(Image $image)` qui **incrémente le nombre de vues** de l’image et sauvegarde la modification. *(2 points)*  
  **Question 3 :** Ajoute une méthode `incrementSupportViews(Image $image)` qui **incrémente le nombre de vues de chaque message de soutien lié à cette image** et sauvegarde les modifications. *(2 points)*  
 
----
+
 
 ### **Implémentation du `ImageController` (6 points)**
  **Question 4 :** Crée un contrôleur `ImageController` et injecte `ImageService` dans son constructeur via l’Injection de Dépendance. *(2 points)*  
@@ -81,7 +81,7 @@ L’examen est divisé en **deux parties** :
 - Vérifie si un message de soutien doit recevoir automatiquement le type de motivation "Encouragement" lorsqu’il dépasse **5 réactions**.
 - Retourne les données à la vue `index.blade.php`. *(4 points)*  
 
----
+
 
 ### **Création de la Vue `index.blade.php` (6 points)**
  **Question 6 :** Crée une vue `resources/views/images/index.blade.php` qui affiche les images sous forme de tableau avec les colonnes suivantes :  
@@ -93,7 +93,7 @@ L’examen est divisé en **deux parties** :
 
  **Question 7 :** Tester le bon fonctionnement de l'affichage et s'assurer que les vues des images et des messages sont bien incrémentées après chaque rafraîchissement de la page. *(2 points)*  
 
----
+
 
 ### **Définition de la Route et Test (2 points)**
  **Question 8 :** Déclare une route `/images` dans `routes/web.php` pour appeler la méthode `index()` du `ImageController`. *(1 point)*  
@@ -102,7 +102,7 @@ L’examen est divisé en **deux parties** :
 - Les **vues des images et des messages de soutien** sont bien incrémentées.
 - Les **messages dépassant 5 réactions reçoivent automatiquement le type de motivation "Encouragement"**. *(1 point)*  
 
----
+
 
 # **Partie 2 : Mini-Projet (45 min - 20 points)**  
  **Objectif :**  
@@ -111,13 +111,13 @@ L’examen est divisé en **deux parties** :
 - Améliorer le design et la responsivité de l’interface.  
 
 ## **Barème & Questions (20 points)**
-### ** Modification des types de motivation d’un message (8 points)**
+### **Modification des types de motivation d’un message (8 points)**
  **Question 10 :** Ajouter une méthode `updateSupportMotivation(SupportMotivation $support, array $typeMotivationIds)` dans `ImageService` pour **modifier les types de motivation associés à un message**. *(3 points)*  
  **Question 11 :** Créer une méthode `edit($id)` dans `SupportMotivationController` qui retourne un formulaire d’édition avec la liste des types de motivation disponibles. *(2 points)*  
  **Question 12 :** Implémenter une méthode `update(Request $request, $id)` dans `SupportMotivationController` qui met à jour les types de motivation d’un message en utilisant `ImageService`. *(2 points)*  
  **Question 13 :** Implémenter une méthode `show($id)` dans `ArticleController`. *(1 points)* 
 
----
+
 
 ### **Ajout des boutons "Modifier" et "Supprimer" (6 points)**
  **Question 14 :** Ajouter dans `index.blade.php` une colonne avec **un bouton "Modifier" redirigeant vers la page d'édition** du message de soutien. *(2 points)*  
@@ -125,14 +125,14 @@ L’examen est divisé en **deux parties** :
  **Question 16 :** Implémenter la méthode `destroy($id)` dans `SupportMotivationController` pour gérer la suppression d’un message de soutien. *(2 points)* 
 
 
----
+
 
 ### ** Amélioration de l’affichage avec du CSS (6 points)**
  **Question 17 :** Modifier `index.blade.php` pour afficher les images et les messages sous forme de **tableau stylisé** en ajoutant un fichier CSS. *(2 points)*  
  **Question 18 :** Améliorer le **formulaire d’édition** pour qu’il soit plus clair et agréable visuellement. *(2 points)*  
  **Question 19 :** Vérifier que les boutons sont bien alignés et que l'affichage est **responsive**. *(2 points)*  
 
----
+
 
 ## **Remarque**
 - **Total de l'examen : 40 points.**  
