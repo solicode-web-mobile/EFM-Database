@@ -22,6 +22,9 @@
                     <td>{{ $hike->user->name }}</td>
                     <td>{{ $hike->views }}</td>
                     <td>
+                        {{-- @if(!empty($recommended[$hike->id]))
+                        {{ $recommended[$hike->id] }}
+                        @endif --}}
                         @foreach ($hike->reviews as $review)
                         <p style="font-weight: bold;">{{ $review->user->name }}:</p> {{ $review->content }} <br>
                         @endforeach
