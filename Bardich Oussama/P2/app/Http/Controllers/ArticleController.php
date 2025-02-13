@@ -22,7 +22,7 @@ class ArticleController extends Controller
         $articles = $this->articleService->getArticlesWithRelations();
     
         foreach ($articles as $article) {
-            if ($article->view_counter > 0) {
+            if ($article->view_counter > 10) {
                 $populairCatego = new Category(['name' => 'populair']);
                 $article->setRelation('categories', $article->categories->push($populairCatego));
             }

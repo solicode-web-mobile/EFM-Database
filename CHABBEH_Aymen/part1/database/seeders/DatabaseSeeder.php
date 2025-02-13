@@ -65,6 +65,7 @@ class DatabaseSeeder extends Seeder
                 'user_id' => 1,
                 'strategy_id' => 2,
                 'content' => 'Great strategy!',
+                'vu'=>10,
                 'created_at' => now(),
                 'updated_at' => now()
             ],
@@ -72,6 +73,7 @@ class DatabaseSeeder extends Seeder
                 'user_id' => 3,
                 'strategy_id' => 1,
                 'content' => 'Good strategy!',
+                'vu'=>10,
                 'created_at' => now(),
                 'updated_at' => now()
             ],
@@ -79,6 +81,7 @@ class DatabaseSeeder extends Seeder
                 'user_id' => 2,
                 'strategy_id' => 1,
                 'content' => 'Needs improvement.',
+                'vu'=>10,
                 'created_at' => now(),
                 'updated_at' => now()
             ]
