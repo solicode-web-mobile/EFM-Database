@@ -71,24 +71,7 @@
                                 @endif
                             </td>
                             <td>
-                                @if($hike->reviews->count())
-                                    @php $hasSuggestions = false; @endphp
-                                    @foreach ($hike->reviews as $review)
-                                        @if($review->suggestions->count())
-                                            @php $hasSuggestions = true; @endphp
-                                            <ul>
-                                                @foreach($review->suggestions as $suggestion)
-                                                    <li>{{ $suggestion->content }}</li>
-                                                @endforeach
-                                            </ul>
-                                        @endif
-                                    @endforeach
-                                    @if(!$hasSuggestions)
-                                        No suggestions
-                                    @endif
-                                @else
-                                    No reviews
-                                @endif
+                               
                             </td>
                         </tr>
                     @endif
