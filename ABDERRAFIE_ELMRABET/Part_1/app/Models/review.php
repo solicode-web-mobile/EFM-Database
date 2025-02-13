@@ -10,4 +10,20 @@ class Review extends Model
     use HasFactory;
 
     //
+    protected $fillable = ['user_id', 'hike_id','content'];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function hike()
+    {
+        return $this->belongsTo(Hike::class);
+    }
+
+    public function suggestions()
+    {
+        return $this->hasMany(Suggestion::class);
+    }
 }
