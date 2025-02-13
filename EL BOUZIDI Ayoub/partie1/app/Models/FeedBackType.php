@@ -8,20 +8,13 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 
-class FeedBack extends Model
+class FeedbackType extends Model
 {
-
     protected $fillable = [
-        'avie_id',
-        'feedback_type_id',
+        'title'
     ];
-    public function avie(): BelongsToMany
+    public function feedBack():HasOne
     {
-        return $this->belongsToMany(Avie::class);
-    }
-
-    public function feedbackType(): BelongsTo
-    {
-        return $this->belongsTo(FeedbackType::class);
+        return $this->hasOne(FeedBack::class);
     }
 }

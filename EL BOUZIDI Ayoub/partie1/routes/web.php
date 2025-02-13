@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\StrategyController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [StrategyController::class, 'index']);

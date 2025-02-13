@@ -11,12 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('stratégie', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('joueur_id')->constrained('joueur')->onDelete('cascade');
-            $table->string('title');
-            $table->text('content');
-            $table->integer('vue');
+        Schema::create('feed_backs', function (Blueprint $table) {
+            $table->foreignId('avie_id')->constrained('avies', 'id')->onDelete('cascade');
+            $table->foreignId('feedback_type_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -26,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('stratégie');
+        Schema::dropIfExists('feed_backs');
     }
 };
