@@ -24,7 +24,7 @@ class HikeController extends Controller
 
         $recommended = [];
         foreach ($hikes as $hike) {
-            if ($hike->reviews->coun() >= 5){
+            if ($hike->reviews->count() >= 5){
                 $recommended[$hike->id] = "RECOMMENDED HIKE !!";
             } else  {
                 $recommended[$hike->id] = null;
