@@ -11,7 +11,9 @@ class ArticleService {
     public function getArticlesWithRelations()
     {
         $articles = Article::with(['user','comments','categories'])->get();
+        $averagePrice = Article::avg('view_counter');
         foreach ($articles as $article) {
+            // $article->Avg = false;
             if($article->view_counter >=10)
             {
                 $categories = $article->categories;
@@ -19,6 +21,10 @@ class ArticleService {
                 $populaire->name = 'Populaire';
                 $categories->push($populaire);
                 $article->setRelation('categories',$categories);
+            }
+            if($article->view_counter >$averagePrice)
+            {
+                $article->Avg = true;
             }
         }
         return $articles;
