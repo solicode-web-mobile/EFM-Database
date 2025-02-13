@@ -23,7 +23,7 @@
         </thead>
         <tbody>
             @foreach ($articles as $article)
-            <tr>
+            <tr style="{{ ($article->Avg) ? 'background-color: red': '' }}">
               <th scope="row">{{ $article->id }}</th>
               <th scope="row">{{ $article->title }}</th>
               <td>{{ $article->user->name }}</td>
