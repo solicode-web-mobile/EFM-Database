@@ -14,24 +14,20 @@ class HikeService
     public function getReviewsColorBasedOnViews($hikes)
     {
         $colors = [];
-
+    
         foreach ($hikes as $hike) {
-            foreach ($hike->reviews as $review) {
+            $totalViews = $hike->reviews->sum('views');
+            $totalReviews = $hike->reviews->count();
+            $averageViews = ($totalReviews > 0) ? $totalViews / $totalReviews : 0;
 
-                $totalViews = $hike->reviews->sum('views');
-                $totalReviews = $hike->reviews->count();
-                $averageViews = ($totalReviews > 0) ? $totalViews / $totalReviews : 0;
-
-                if ($review->views > $averageViews) {
-                    $colors[$review->id] = 'red';
-                } else {
-                    $colors[$review->id] = '';
-                }
+            foreach ($hike->reviews as $review){
+                $colors[$review->id] = ($review->views > $averageViews) ? '#de7e48' : 'rgb(216, 214, 232)';
             }
         }
-
+    
         return $colors;
     }
+    
 
 
     // 

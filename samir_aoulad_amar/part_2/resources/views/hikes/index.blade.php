@@ -23,10 +23,10 @@
     <tbody>
       
       @foreach($hikes as $hike)
-      <div  class="{{$colors[$hike->id] }}">
-   
+    
+        {{-- {{ $colors[$hike->id] ?? '#ffffff' }}; --}}
 
-      <tr style="color:{{$colors[$hike->id] }};">
+      <tr>
 
         <td>{{ $hike->title }}</td>
         <td>{{ $hike->user->name }}</td>
@@ -49,14 +49,14 @@
             <tbody>
               @foreach($hike->reviews as $review)
               <tr >
-                <td  style="background-color:{{$colors[$hike->id] }};">{{ $review->content }}</td>
-                <td  style="background-color:{{$colors[$hike->id] }};">{{ $review->views }}</td>
-                <td  style="background-color:{{$colors[$hike->id] }};">
+                <td style="background-color:{{$colors[$review->id]}};">{{ $review->content }}</td>
+                <td style="background-color:{{$colors[$review->id]}};">{{ $review->views }}</td>
+                <td style="background-color:{{$colors[$review->id]}};">
                   @foreach($review->suggestions as $suggestion)
                     <span class="badge badge-info">{{ $suggestion->content }}</span>
                   @endforeach
                 </td>
-                <td  style="background-color:{{$colors[$hike->id] }};">
+                <td style="background-color:{{$colors[$review->id]}};">
                   <a href="{{ route('reviews.show', $review->id) }}" class="btn btn-info btn-sm">Show</a>
                   <a href="{{ route('reviews.edit', $review->id) }}" class="btn btn-warning btn-sm">Edit</a>
                   <form action="{{ route('reviews.destroy', $review->id) }}" method="POST" style="display:inline-block;" onsubmit="return confirm('Are you sure you want to delete this review?');">
@@ -73,8 +73,7 @@
         <td>
           <a href="{{ route('hikes.show', $hike->id) }}" class="btn btn-info btn-sm">Show</a>
         </td>
-      </tr>
-    </div>
+      </tr> 
       @endforeach
     </tbody>
   </table>
